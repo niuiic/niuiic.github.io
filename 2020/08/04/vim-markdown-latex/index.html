@@ -1,0 +1,1756 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Choose vim to edit markdown and latex files, niuiic &#39;s Blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174687404-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-174687404-1');
+</script>
+
+
+    <title>Choose vim to edit markdown and latex files | niuiic &#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/medias/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="niuiic 's Blog" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">niuiic &#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">niuiic &#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/niuiic/niuiic.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/niuiic/niuiic.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Choose vim to edit markdown and latex files</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Vim/">
+                                <span class="chip bg-color">Vim</span>
+                            </a>
+                        
+                            <a href="/tags/Latex/">
+                                <span class="chip bg-color">Latex</span>
+                            </a>
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Vim/" class="post-category">
+                                Vim
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-08-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-23
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    25 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="使用-vim-编写-markdown-和-latex"><a href="#使用-vim-编写-markdown-和-latex" class="headerlink" title="使用 vim 编写 markdown 和 latex"></a>使用 vim 编写 markdown 和 latex</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="主要配置"><a href="#主要配置" class="headerlink" title="主要配置"></a>主要配置</h3><ul>
+<li>操作系统：arch linux</li>
+<li>编辑器：neovim（coc-actions 仅支持 neovim），如果使用 vim，请换用另外的补全插件</li>
+<li>预览：markdown 使用 typora，latex 用 vimtex 调用 MuPDF</li>
+</ul>
+<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p>在使用 vim 之前，曾尝试了两种方案，一是 vscode + vim，配置简单，功能都还不错，问题是自动输入法切换延迟有点长，甚至使用方向键都有点卡，二是 jetbrains 系列的 ide，windows 下用来码字是体验最好的（linux 下对中文输入法不友好），但资源消耗太多，且预览不是很理想</p>
+<p>下面是这套方案的优缺点</p>
+<ul>
+<li>linux 下 vim 的输入法切换体验远远好于 windows（笔者未使用 mac os，不清楚情况）</li>
+<li>windows 下使用 texlive 安装 latex 相关依赖，编译 latex 文档时出现错误，暂时没能修复，linux 下比较稳定</li>
+<li>neovim 以及 vim 比 vscode + vim 插件更流畅</li>
+<li>支持 latex 即时编译，缺点是无法正反向搜索，这点在 vscode 中是支持的</li>
+<li>typora 对 markdown 渲染的支持比 vim 以及 vscode 的相关插件好得多，比如支持本地 mp4 视频插入等，缺点是无法正反向搜索</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>以下步骤全靠回忆，不会有错，但可能有漏，请小心操作，避免掉坑，欢迎留言</li>
+<li>由于网页的关系，直接从本文复制的内容可能存在非法字符，复制粘贴后应当检查一下</li>
+<li>arch linux 可能帮你避开许多坑，如果想了解并使用 arch，可参考 arch wiki 安装教程，若水平有限，可以在网上搜索视频安装教程，还不行的话直接装 manjaro 吧</li>
+<li>装好下面提到的软件时注意检查是否可以直接在终端调用</li>
+</ul>
+<h2 id="vim-简单配置"><a href="#vim-简单配置" class="headerlink" title="vim 简单配置"></a>vim 简单配置</h2><h3 id="vim-plug"><a href="#vim-plug" class="headerlink" title="vim-plug"></a>vim-plug</h3><p><a target="_blank" rel="noopener" href="https://github.com/junegunn/vim-plug">github 地址</a></p>
+<p>作者提供的安装方式应该是装不上的，似乎是这个链接本身有问题，不是 GFW 的锅</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>把项目克隆到本地，将项目中的 plug.vim 放到<code>~/.local/share/nvim/site/autoload</code>目录下，如果你使用 vim，可以放到<code>~/.vim/autoload</code>目录下</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>编辑<code>~/.config/nvim/init.vim</code></p>
+<p>一个<code>Plug</code>对应一个插件，如果你和我一样只是想用 vim 编辑 markdown 和 latex（不包括 markdown 预览），那就直接 copy 吧（注意可以更换第一行<code>begin</code>后插件存放的路径）</p>
+<p>插件依次为自动补全、文件树、文件浏览器（需要安装 nnn，没有的话就不要它了）、snippets 补全、snippets 补全、状态栏美化、自动格式化、markdown 支持、开始界面、latex 支持</p>
+<p>部分本文未涉及的插件的具体用法请自行前往 github 查看，或者放弃使用</p>
+<pre class="line-numbers language-none"><code class="language-none">call plug#begin(&#39;~&#x2F;.vim&#x2F;plugged&#39;)
+Plug &#39;neoclide&#x2F;coc.nvim&#39;, &#123;&#39;branch&#39;: &#39;release&#39;&#125;
+Plug &#39;preservim&#x2F;nerdtree&#39;
+Plug &#39;mcchrish&#x2F;nnn.vim&#39;
+Plug &#39;SirVer&#x2F;ultisnips&#39;
+Plug &#39;honza&#x2F;vim-snippets&#39;
+Plug &#39;vim-airline&#x2F;vim-airline&#39;
+Plug &#39;Chiel92&#x2F;vim-autoformat&#39;
+Plug &#39;plasticboy&#x2F;vim-markdown&#39;
+Plug &#39;mhinz&#x2F;vim-startify&#39;
+Plug &#39;lervag&#x2F;vimtex&#39;
+call plug#end()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>先别急着装插件，查看<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim">coc.nvim wiki</a>，先把依赖装了，主要是<code>nodejs</code>和<code>yarn</code>，作者给出的方法再次有点为难了，不过 arch linux 直接用包管理器装就行，其他的可能需要折腾一会儿</p>
+<p>另外<a target="_blank" rel="noopener" href="https://github.com/Chiel92/vim-autoformat">vim-autoformat</a>插件需要安装依赖，在 vim-autoformat 的 github 主页下查找，主要是<code>remark</code> for markdown 以及<code>latexindent.pl</code> for latex，arch 系 linux 可以先尝试从 aur 安装，不行的话可以按照 github 上作者给出的方式安装，大概又是一番折腾，特别注意，如果这两个软件无法在全局调用，需要在配置文件中加上<code>let g:formatterpath = [&#39;/some/path/to/a/folder&#39;, &#39;/home/superman/formatters&#39;]</code>，也可以选择创建符号链接使其可在全局调用（暂时有个问题，格式化 markdown 时会将其中的 latex 公式比如<code>$\frac&#123;&#125;&#123;&#125;$</code>变为<code>$\\frac&#123;&#125;&#123;&#125;$</code>，不过可以手动替换<code>\\</code>为<code>\</code>，或者也可以尝试其他的格式化工具，见补充部分）</p>
+<p>重新进入 neovim，执行<code>:PlugInstall</code>，等待安装结束，退出</p>
+<h3 id="vim-配置"><a href="#vim-配置" class="headerlink" title="vim 配置"></a>vim 配置</h3><p>剩余的配置如下，重要的在下面，从<code>&quot; vim snippets##########################################</code>开始，前面的除了前两行都是 copy 自<code>coc.nvim</code>的基础配置，不想细看就 copy 吧，如果只想编写 markdown 或 latex，则删除对应插件的配置，顺便把前面的插件也给删了</p>
+<pre class="line-numbers language-none"><code class="language-none">set relativenumber
+set number
+
+&quot; TextEdit might fail if hidden is not set.
+set hidden
+
+&quot; Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+&quot; Give more space for displaying messages.
+set cmdheight&#x3D;2
+
+&quot; Having longer updatetime (default is 4000 ms &#x3D; 4 s) leads to noticeable
+&quot; delays and poor user experience.
+set updatetime&#x3D;300
+
+&quot; Don&#39;t pass messages to |ins-completion-menu|.
+set shortmess+&#x3D;c
+
+&quot; Always show the signcolumn, otherwise it would shift the text each time
+&quot; diagnostics appear&#x2F;become resolved.
+set signcolumn&#x3D;yes
+
+&quot; Use tab for trigger completion with characters ahead and navigate.
+&quot; NOTE: Use command &#39;:verbose imap &lt;tab&gt;&#39; to make sure tab is not mapped by
+&quot; other plugin before putting this into your config.
+inoremap &lt;silent&gt;&lt;expr&gt; &lt;TAB&gt;
+			\ pumvisible() ? &quot;\&lt;C-n&gt;&quot; :
+			\ &lt;SID&gt;check_back_space() ? &quot;\&lt;TAB&gt;&quot; :
+			\ coc#refresh()
+inoremap &lt;expr&gt;&lt;S-TAB&gt; pumvisible() ? &quot;\&lt;C-p&gt;&quot; : &quot;\&lt;C-h&gt;&quot;
+
+function! s:check_back_space() abort
+	let col &#x3D; col(&#39;.&#39;) - 1
+	return !col || getline(&#39;.&#39;)[col - 1]  &#x3D;~# &#39;\s&#39;
+endfunction
+
+&quot; Use &lt;c-space&gt; to trigger completion.
+inoremap &lt;silent&gt;&lt;expr&gt; &lt;c-space&gt; coc#refresh()
+
+&quot; Use &lt;cr&gt; to confirm completion, &#96;&lt;C-g&gt;u&#96; means break undo chain at current
+&quot; position. Coc only does snippet and additional edit on confirm.
+&quot; &lt;cr&gt; could be remapped by other vim plugin, try &#96;:verbose imap &lt;CR&gt;&#96;.
+if exists(&#39;*complete_info&#39;)
+	inoremap &lt;expr&gt; &lt;cr&gt; complete_info()[&quot;selected&quot;] !&#x3D; &quot;-1&quot; ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
+else
+	inoremap &lt;expr&gt; &lt;cr&gt; pumvisible() ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;C-g&gt;u\&lt;CR&gt;&quot;
+endif
+
+&quot; Use &#96;[g&#96; and &#96;]g&#96; to navigate diagnostics
+nmap &lt;silent&gt; [g &lt;Plug&gt;(coc-diagnostic-prev)
+nmap &lt;silent&gt; ]g &lt;Plug&gt;(coc-diagnostic-next)
+
+&quot; GoTo code navigation.
+nmap &lt;silent&gt; gd &lt;Plug&gt;(coc-definition)
+nmap &lt;silent&gt; gy &lt;Plug&gt;(coc-type-definition)
+nmap &lt;silent&gt; gi &lt;Plug&gt;(coc-implementation)
+nmap &lt;silent&gt; gr &lt;Plug&gt;(coc-references)
+
+&quot; Use K to show documentation in preview window.
+nnoremap &lt;silent&gt; K :call &lt;SID&gt;show_documentation()&lt;CR&gt;
+
+function! s:show_documentation()
+	if (index([&#39;vim&#39;,&#39;help&#39;], &amp;filetype) &gt;&#x3D; 0)
+		execute &#39;h &#39;.expand(&#39;&lt;cword&gt;&#39;)
+	else
+		call CocAction(&#39;doHover&#39;)
+	endif
+endfunction
+
+&quot; Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync(&#39;highlight&#39;)
+
+&quot; Symbol renaming.
+nmap &lt;leader&gt;rn &lt;Plug&gt;(coc-rename)
+
+&quot; Formatting selected code.
+xmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)
+nmap &lt;leader&gt;f  &lt;Plug&gt;(coc-format-selected)
+
+augroup mygroup
+	autocmd!
+	&quot; Setup formatexpr specified filetype(s).
+	autocmd FileType typescript,json setl formatexpr&#x3D;CocAction(&#39;formatSelected&#39;)
+	&quot; Update signature help on jump placeholder.
+	autocmd User CocJumpPlaceholder call CocActionAsync(&#39;showSignatureHelp&#39;)
+augroup end
+
+&quot; Applying codeAction to the selected region.
+&quot; Example: &#96;&lt;leader&gt;aap&#96; for current paragraph
+xmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)
+nmap &lt;leader&gt;a  &lt;Plug&gt;(coc-codeaction-selected)
+
+&quot; Remap keys for applying codeAction to the current line.
+nmap &lt;leader&gt;ac  &lt;Plug&gt;(coc-codeaction)
+&quot; Apply AutoFix to problem on the current line.
+nmap &lt;leader&gt;qf  &lt;Plug&gt;(coc-fix-current)
+
+&quot; Map function and class text objects
+&quot; NOTE: Requires &#39;textDocument.documentSymbol&#39; support from the language server.
+xmap if &lt;Plug&gt;(coc-funcobj-i)
+omap if &lt;Plug&gt;(coc-funcobj-i)
+xmap af &lt;Plug&gt;(coc-funcobj-a)
+omap af &lt;Plug&gt;(coc-funcobj-a)
+xmap ic &lt;Plug&gt;(coc-classobj-i)
+omap ic &lt;Plug&gt;(coc-classobj-i)
+xmap ac &lt;Plug&gt;(coc-classobj-a)
+omap ac &lt;Plug&gt;(coc-classobj-a)
+
+&quot; Use CTRL-S for selections ranges.
+&quot; Requires &#39;textDocument&#x2F;selectionRange&#39; support of LS, ex: coc-tsserver
+nmap &lt;silent&gt; &lt;C-s&gt; &lt;Plug&gt;(coc-range-select)
+xmap &lt;silent&gt; &lt;C-s&gt; &lt;Plug&gt;(coc-range-select)
+
+&quot; Add &#96;:Format&#96; command to format current buffer.
+command! -nargs&#x3D;0 Format :call CocAction(&#39;format&#39;)
+
+&quot; Add &#96;:Fold&#96; command to fold current buffer.
+command! -nargs&#x3D;? Fold :call     CocAction(&#39;fold&#39;, &lt;f-args&gt;)
+
+&quot; Add &#96;:OR&#96; command for organize imports of the current buffer.
+command! -nargs&#x3D;0 OR   :call     CocAction(&#39;runCommand&#39;, &#39;editor.action.organizeImport&#39;)
+
+&quot; Add (Neo)Vim&#39;s native statusline support.
+&quot; NOTE: Please see &#96;:h coc-status&#96; for integrations with external plugins that
+&quot; provide custom statusline: lightline.vim, vim-airline.
+set statusline^&#x3D;%&#123;coc#status()&#125;%&#123;get(b:,&#39;coc_current_function&#39;,&#39;&#39;)&#125;
+
+&quot; Mappings using CoCList:
+&quot; Show all diagnostics.
+nnoremap &lt;silent&gt; &lt;space&gt;a  :&lt;C-u&gt;CocList diagnostics&lt;cr&gt;
+&quot; Manage extensions.
+nnoremap &lt;silent&gt; &lt;space&gt;e  :&lt;C-u&gt;CocList extensions&lt;cr&gt;
+&quot; Show commands.
+nnoremap &lt;silent&gt; &lt;space&gt;c  :&lt;C-u&gt;CocList commands&lt;cr&gt;
+&quot; Find symbol of current document.
+nnoremap &lt;silent&gt; &lt;space&gt;o  :&lt;C-u&gt;CocList outline&lt;cr&gt;
+&quot; Search workspace symbols.
+nnoremap &lt;silent&gt; &lt;space&gt;s  :&lt;C-u&gt;CocList -I symbols&lt;cr&gt;
+&quot; Do default action for next item.
+nnoremap &lt;silent&gt; &lt;space&gt;j  :&lt;C-u&gt;CocNext&lt;CR&gt;
+&quot; Do default action for previous item.
+nnoremap &lt;silent&gt; &lt;space&gt;k  :&lt;C-u&gt;CocPrev&lt;CR&gt;
+&quot; Resume latest coc list.
+nnoremap &lt;silent&gt; &lt;space&gt;p  :&lt;C-u&gt;CocListResume&lt;CR&gt;
+
+&quot; vim snippets##########################################
+let g:UltiSnipsExpandTrigger&#x3D;&quot;&lt;tab&gt;&quot;
+let g:UltiSnipsJumpForwardTrigger&#x3D;&quot;&lt;c-b&gt;&quot;
+let g:UltiSnipsJumpBackwardTrigger&#x3D;&quot;&lt;c-z&gt;&quot;
+
+&quot; autoformat##########################################
+noremap &lt;C-L&gt; :Autoformat&lt;CR&gt;
+
+&quot; nerdtree##########################################
+map &lt;C-p&gt; :NERDTreeToggle&lt;CR&gt;
+
+&quot; vimtex##########################################
+let g:vimtex_view_general_viewer &#x3D; &#39;mupdf&#39;
+let g:vimtex_view_general_options_latexmk &#x3D; &#39;-reuse-instance&#39;
+let g:vimtex_view_general_options
+\ &#x3D; &#39;-reuse-instance -forward-search @tex @line @pdf&#39;
+\ . &#39; -inverse-search &quot;&#39; . exepath(v:progpath)
+\ . &#39; --servername &#39; . v:servername
+\ . &#39; --remote-send \&quot;^&lt;C-\^&gt;^&lt;C-n^&gt;&#39;
+\ . &#39;:execute &#39;&#39;drop &#39;&#39; . fnameescape(&#39;&#39;\%f&#39;&#39;)^&lt;CR^&gt;&#39;
+\ . &#39;:\%l^&lt;CR^&gt;:normal\! zzzv^&lt;CR^&gt;&#39;
+\ . &#39;:call remote_foreground(&#39;&#39;&#39;.v:servername.&#39;&#39;&#39;)^&lt;CR^&gt;^&lt;CR^&gt;\&quot;&quot;&#39;
+
+set conceallevel&#x3D;1
+let g:tex_conceal&#x3D;&#39;abdmg&#39;
+&quot; Prevent that vim detect a file with the tex suffix as a plaintex
+let g:tex_flavor&#x3D;&#39;latex&#39;
+&quot; Set the viewer method
+let g:vimtex_view_method&#x3D;&#39;mupdf&#39;
+&quot; Never opened&#x2F;closed the quickfix window automatically. The quickfix window shows the errors and&#x2F;or warnings when compile, and we can open the quickfix windows use \le
+let g:vimtex_quickfix_mode&#x3D;0
+&quot; 最后两行开启自动隐藏功能,开启了这个功能，除了你光标所在的那一行之外，文本里夹杂的LaTeX代码就都会隐藏或者替换成其他符号
+set conceallevel&#x3D;1
+
+let &amp;t_SI.&#x3D;&quot;\e[5 q&quot; &quot;SI &#x3D; INSERT mode
+let &amp;t_SR.&#x3D;&quot;\e[4 q&quot; &quot;SR &#x3D; REPLACE mode
+let &amp;t_EI.&#x3D;&quot;\e[1 q&quot; &quot;EI &#x3D; NORMAL mode (ELSE)
+
+inoremap &lt;C-c&gt; &lt;esc&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>说明：格式化快捷键设置成了<code>ctrl + l</code>，<code>coc.nvim</code>可以使用<code>ctrl + n</code>选择提示项（只能往下翻，对我来说足够了，需要更好地体验可以自行设置），按<code>ctrl + p</code>打开文件树</p>
+<h3 id="输入法自动切换"><a href="#输入法自动切换" class="headerlink" title="输入法自动切换"></a>输入法自动切换</h3><p>这部分很重要，极其影响体验感</p>
+<p>首先确保你使用的是 fcitx 输入法，fcitx4 和 fcitx5 都可以</p>
+<p><a target="_blank" rel="noopener" href="https://www.vim.org/scripts/script.php?script_id=3764">下载最新版本的 fcitx.vim</a></p>
+<p>解压后把 plugin 和 so 两个文件夹放到<code>~/.config/nvim</code>，或者干脆在这个目录下解压，如果是 vim，则应放到<code>~/.vim</code></p>
+<p>这里有个坑，上面已经填了，配置文件最后一行<code>inoremap &lt;C-c&gt; &lt;esc&gt;</code>，将<code>ctrl + c</code>映射为<code>esc</code>，默认情况下两者都可以进入普通模式，但前者不会触发相关事件，这使得插件无效（不知有没有像我一样使用<code>ctrl + c</code>的 vimer）</p>
+<p>如果你的<code>ctrl + c</code>在插入模式下另有用处，请删除该行</p>
+<p>注意：作者并不是为 neovim 设计的插件，目前最新版本的 neovim 可以使用，但不意味着一直可以使用</p>
+<h3 id="相关-python-依赖安装"><a href="#相关-python-依赖安装" class="headerlink" title="相关 python 依赖安装"></a>相关 python 依赖安装</h3><p>coc.nvim 需要 python 模块支持，另外 fcitx.vim 也需要 python 的 vim 模块以使用 fcitx.py 来获取更好的体验，不过这和 neovim 就没关系了，也可以装上，还有<code>autoformat</code>插件也需要 Python 模块</p>
+<p>使用<code>pip</code>安装<code>python-vim</code>、<code>neovim</code>，并<code>python3 -m pip install pynvim</code></p>
+<p>对于 gentoo，使用 pip 安装 python 模块需要加–usr 选项，这样安装的模块默认情况下是无法被 python 找到的，需要设置一下。如果不知如何解决，可以直接<code>emerge dev-python/pynvim</code>，其他的就无需安装</p>
+<p>如果你的 neovim 找不到 Python3，则在 neovim 配置文件中加入<code>let g:python3_host_prog=/path/to/python/executable/</code>，路径自己改</p>
+<h3 id="coc-nvim-配置"><a href="#coc-nvim-配置" class="headerlink" title="coc.nvim 配置"></a>coc.nvim 配置</h3><p>查看<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions">coc extensions</a>，找到 markdown 和 latex 的对应扩展（按需安装），使用<code>:CocInstall</code>指令安装</p>
+<p>此外，还需要安装<code>coc-snippets</code>和<code>coc-actions</code>以配合 snippets 相关插件</p>
+<p>查看<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Language-servers">coc language servers</a>，找到 markdown 和 latex，按照指示完成配置，如果遇到困难，继续往下看</p>
+<p>这里使用<code>:CocConfig</code>指令打开 coc 配置文件，如果你不熟悉 json，特别注意，文件中的所有内容需要用<code>&#123;&#125;</code>包起来，直接 copy 作者给的配置会出现语法错误</p>
+<p>这里安装<code>efm-langserver</code>和<code>digestif</code>又有问题了，arch 直接从 aur 安装再次避坑（需要先配置 go 语言环境，GOROOT 在 arch 上为<code>/usr/lib/go</code>，如果你上网找的话，可能会被<code>/usr/local/go</code>给坑了，go 安裝完毕后 GOROOT 下是有文件的，不确定是哪个可以去查看一下，另外还需要打开<code>go module</code>，以及给<code>go get</code>设置国内代理，详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44690437/article/details/103571558">go 语言依赖管理</a>，试图那啥的可以省省了，<code>go get</code>不认这招，或许全系统代理可以），其他的可能需要折腾一会儿</p>
+<p>这里附上我的<code>coc-settings.json</code>，copy 的时候把两个路径换成自己的，另外特别注意<code>command</code>需要使用绝对路径</p>
+<pre class="line-numbers language-none"><code class="language-none">&#123;
+          languageserver : &#123;
+                   digestif : &#123;
+                          command :  &#x2F;bin&#x2F;digestif ,
+                          filetypes : [ tex ,  plaintex ,  context ]
+                 &#125;,
+                  efm : &#123;
+                          command :  &#x2F;bin&#x2F;efm-langserver ,
+                         args : [ -c ,  &#x2F;home&#x2F;yourUsername&#x2F;.config&#x2F;efm-langserver&#x2F;config.yaml ],
+                          filetypes : [ vim ,  eruby ,  markdown ]
+                 &#125;
+        &#125;,
+          suggest.noselect : false
+ &#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h2><p>markdown 的部分上面已经完成的差不多了，现在先创建一个.md 文件，查看是否可以补全，<code>nvim test.md</code>，输入<code>img</code>，应该会有提示，如果没有，请检查<code>coc.nvim</code>以及两个关于<code>snippets</code>的插件</p>
+<p>目前还有一个至关重要的问题，markdown 中的 latex 无法补全，极其影响体验感，不过<code>coc.nvim</code>可以<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc.nvim/wiki/Create-custom-source">自定义 sources</a>，在<code>~/.config/nvim/autoload/coc/source</code>下创建<code>latex.vim</code>，写入</p>
+<pre class="line-numbers language-none"><code class="language-none">function! coc#source#latex#init() abort
+	return &#123;
+				\ &#39;triggerCharacters&#39;: [&#39;\&#39;],
+				\&#39;filetype&#39;:[&#39;markdown&#39;]
+				\&#125;
+endfunction
+
+function! coc#source#latex#complete(opt, cb) abort
+	let items &#x3D; [&#39;dot&#123;&#125;&#39;, &#39;ddot&#123;&#125;&#39;, &#39;bar&#123;&#125;&#39;, &#39;hat&#123;&#125;&#39;, &#39;exp&#39;, &#39;sin&#39;, &#39;cos&#39;, &#39;tan&#39;, &#39;sec&#39;, &#39;csc&#39;, &#39;vec&#123;&#125;&#39;, &#39;cot&#39;, &#39;arcsin&#39;, &#39;arccos&#39;, &#39;arctan&#39;, &#39;sinh&#39;, &#39;cosh&#39;, &#39;tanh&#39;, &#39;coth&#39;, &#39;sh&#39;, &#39;ch&#39;, &#39;th&#39;, &#39;max&#39;, &#39;min&#39;, &#39;partial&#39;, &#39;nabla&#39;, &#39;prime&#39;, &#39;backprime&#39;, &#39;infty&#39;, &#39;eth&#39;, &#39;hbar&#39;, &#39;sqrt&#123;&#125;&#39;, &#39;sqrt[]&#123;&#125;&#39;, &#39;pm&#39;, &#39;mp&#39;, &#39;times&#39;, &#39;div&#39;, &#39;cdot&#39;, &#39;odot&#39;, &#39;bigodot&#39; , &#39;&#123; \&#125;&#39;, &#39;in&#39;, &#39;not&#39;, &#39;ni&#39;, &#39;cap&#39;, &#39;Cap&#39;, &#39;bigcap&#39;, &#39;cup&#39;, &#39;Cup&#39;, &#39;bigcup&#39;, &#39;subset&#39;, &#39;supset&#39;, &#39;supseteq&#39;, &#39;subseteq&#39;, &#39;subseteqq&#39;, &#39;supseteqq&#39;, &#39;subsetneq&#39;, &#39;supsetneq&#39;, &#39;supsetneqq&#39;, &#39;subsetneqq&#39;, &#39;sim&#39;, &#39;approx&#39;, &#39;leq&#39;, &#39;geq&#39;, &#39;parallel&#39;, &#39;nparallel&#39;, &#39;perp&#39;, &#39;angle&#39;, &#39;Box&#39;, &#39;bigtriangleup&#39;, &#39;bigtriangledown&#39;, &#39;forall&#39;, &#39;therefore&#39;, &#39;because&#39;, &#39;overline&#123;&#125;&#39;, &#39;Rightarrow&#39;, &#39;Leftarrow&#39;, &#39;rightarrow&#39;, &#39;leftarrow&#39;, &#39;leftrightarrow&#39;, &#39;nRightarrow&#39;, &#39;nLeftarrow&#39;, &#39;nleftarrow&#39;, &#39;nrightarrow&#39;, &#39;nleftrightarrow&#39;, &#39;overleftarrow&#123;&#125;&#39;, &#39;overrightarrow&#123;&#125;&#39;, &#39;overset&#123;&#125;&#39;, &#39;underline&#123;&#125;&#39;, &#39;sum&#39;, &#39;prod&#39;, &#39;lim&#39;, &#39;limits&#39;, &#39;int&#39;, &#39;iint&#39;, &#39;oint&#39;, &#39;iiint&#39;, &#39;frac&#123;&#125;&#123;&#125;&#39;, &#39;tfrac&#123;&#125;&#123;&#125;&#39;, &#39;dfrac&#123;&#125;&#123;&#125;&#39;, &#39;\begin&#123;matrix&#125;\end&#123;matrix&#125;&#39;, &#39;\begin&#123;vmatrix&#125;\end&#123;vmatrix&#125;&#39;, &#39;\begin&#123;bmatrix&#125;\end&#123;bmatrix&#125;&#39;, &#39;\begin&#123;Bmatrix&#125;\end&#123;Bmatrix&#125;&#39;, &#39;\begin&#123;pmatrix&#125;\end&#123;pmatrix&#125;&#39;,&#39;\begin&#123;cases&#125;\end&#123;cases&#125;&#39;, &#39;\begin&#123;aligned&#125;\end&#123;aligned&#125;&#39;, &#39;\begin&#123;array&#125;\end&#123;array&#125;&#39;, &#39;alpha&#39;, &#39;psi&#39;, &#39;Delta&#39;, &#39;delta&#39;, &#39;beta&#39;, &#39;lambda&#39;, &#39;rho&#39;, &#39;varepsilon&#39;, &#39;Gamma&#39;, &#39;chi&#39;, &#39;mu&#39;, &#39;sigma&#39;, &#39;Lambda&#39;, &#39;tau&#39;, &#39;varphi&#39;, &#39;varPhi&#39;, &#39;phi&#39;, &#39;Phi&#39;, &#39;eta&#39;, &#39;omega&#39;, &#39;varrho&#39;, &#39;Pi&#39;, &#39;pi&#39;, &#39;gamma&#39;, &#39;xi&#39;, &#39;Psi&#39;, &#39;Sigma&#39;, &#39;varnothing&#39;, &#39;iiiint&#39;]
+	call a:cb(items)
+endfunction<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>关于自定义 source 的具体细节，请前往 github，上面给出的 source 设定在 markdown 文件下加载，使用<code>\</code>作为触发符，这里只加入了我常用的几个命令，更多内容可以自行添加</p>
+<p>到此，markdown 部分已经完成，可以先检查一下有没有问题</p>
+<h2 id="latex"><a href="#latex" class="headerlink" title="latex"></a>latex</h2><p>首先安装 latex 编译环境，这里使用 texlive</p>
+<p>参考<a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/TeX_Live_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">arch wiki</a>，不想折腾的话就把安装部分提到的几个包全装了，应该就问题不大了</p>
+<p>如果还有问题，或者是其他 linux 发行版，可以参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/40053417">Deepin Linux 安装和搭建 LaTex 环境</a>和<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41814939/article/details/82288145">Ubuntu18.04 安装 LaTeX 并配置中文环境</a>，不过安装 texlive-full 实在太麻烦了，我装了 3 小时，最后似乎卡住了，手贱中断了，再也装不上了，这个包和前面 arch wiki 中提到的包大部分是冲突的，如果是 arch 系的就不要折腾这个了，如果是 gentoo 的话，如果坚持本地编译的话，建议备好电影小零食~~（窃以为使用 gentoo 的 linux 骨灰级玩家不需要这篇文章，强行 gentoo 的玩家可能还没从坑里爬出来）</p>
+<p>安装 MuPDF，当然你也可以选择别的，详见<a target="_blank" rel="noopener" href="https://github.com/lervag/vimtex">github</a>，如果换了的话需要把上面的配置也一并修改</p>
+<p>到此结束，测试一下，<code>nvim test.tex</code>，写入</p>
+<pre class="line-numbers language-none"><code class="language-none">\documentclass&#123;article&#125;
+\begin&#123;document&#125;
+你好，world!
+\end&#123;document&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在普通模式下按<code>\ll</code>进行编译，再按<code>\lv</code>预览，不要关闭预览窗口，修改成<code>hello world</code>，保存，重新编译，看看预览是否同步改变，这里还可以设置保存时自动编译</p>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ul>
+<li>linux 下没有可以和 FastStone 媲美的截图软件，不过可以用 KolourPaint 快速编辑图片，需要更多操作可以使用 GIMP，不建议使用 Pinta，由于无法输入中文</li>
+<li>markdown 中可以用 html 语法插入 mp4 视频，比起 gif 的好处就不用多说了，缺点是略显臃肿</li>
+<li>可以再为 vim 配置更多插件，比如 markdown 自动贴图、markdown 预览等等，也可以继续自定义 snippets，这些部分按个人喜好配置，这里不再介绍</li>
+<li>桌面推荐 i3，i3 配置较为麻烦，可以保留原有桌面，简单配置 i3，仅用来写 markdown 和 latex</li>
+<li>或许可以在 WSL 中配置，不过暂时折腾到此为止了</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="为-markdown-添加大纲显示"><a href="#为-markdown-添加大纲显示" class="headerlink" title="为 markdown 添加大纲显示"></a>为 markdown 添加大纲显示</h3><h4 id="Excuberant-Ctags"><a href="#Excuberant-Ctags" class="headerlink" title="Excuberant Ctags"></a>Excuberant Ctags</h4><p>首先安装<code>Excuberant Ctags</code>，debian 系和 redhat 系应该可以使用包管理工具直接安装，arch 这次似乎进坑了，需要编译源码</p>
+<p>访问<a target="_blank" rel="noopener" href="http://ctags.sourceforge.net/">Excuberant Ctags 下载页面</a>，没错，GFW 警告，这个资源可以在网上搜，文件名为 ctags-5.8，csdn 上有，本来想上传一个免费的，结果死活都重复，算了</p>
+<p>解压，cd 入目录，<code>./configure</code>，继续<code>make &amp;&amp; sudo make install</code>，正常情况下应该没问题了，如果有问题，请参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/dream2009gd/article/details/44102227">安装 Exuberant Ctags 及 Tag List 插件</a></p>
+<h4 id="easytags"><a href="#easytags" class="headerlink" title="easytags"></a>easytags</h4><p>使用<code>vim-plug</code>安装</p>
+<pre class="line-numbers language-none"><code class="language-none">Plug &#39;xolox&#x2F;vim-misc&#39;
+Plug &#39;xolox&#x2F;vim-easytags&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="tagbar"><a href="#tagbar" class="headerlink" title="tagbar"></a><a target="_blank" rel="noopener" href="https://github.com/majutsushi/tagbar">tagbar</a></h4><pre class="line-numbers language-none"><code class="language-none">Plug &#39;majutsushi&#x2F;tagbar&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意使用该插件时可能有问题，详情见 github</p>
+<h4 id="markdown2ctags"><a href="#markdown2ctags" class="headerlink" title="markdown2ctags"></a>markdown2ctags</h4><pre class="line-numbers language-none"><code class="language-none">Plug &#39;jszakmeister&#x2F;markdown2ctags&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><pre class="line-numbers language-none"><code class="language-none">&quot; tagbar#####################################
+nmap &lt;C-M&gt; :TagbarToggle&lt;CR&gt;
+
+&quot; markdown2ctags#####################################
+let g:tagbar_type_markdown &#x3D; &#123;
+    \ &#39;ctagstype&#39;: &#39;markdown&#39;,
+    \ &#39;ctagsbin&#39; : &#39;&#x2F;home&#x2F;yourUsername&#x2F;.vim&#x2F;plugged&#x2F;markdown2ctags&#x2F;markdown2ctags.py&#39;,
+    \ &#39;ctagsargs&#39; : &#39;-f - --sort&#x3D;yes --sro&#x3D;»&#39;,
+    \ &#39;kinds&#39; : [
+        \ &#39;s:sections&#39;,
+        \ &#39;i:images&#39;
+    \ ],
+    \ &#39;sro&#39; : &#39;»&#39;,
+    \ &#39;kind2scope&#39; : &#123;
+        \ &#39;s&#39; : &#39;section&#39;,
+    \ &#125;,
+    \ &#39;sort&#39;: 0,
+\ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里给 tagbar 的快捷键设置为<code>ctrl + m</code>，<code>markdown2ctags</code>的配置中需要注意更换你的<code>markdown2ctags.py</code>所在路径，且注意通过<code>:set filetype</code>查看你的 markdown 文件的文件类型名称是否是 markdown，若不是，则修改<code>ctagstype</code></p>
+<h3 id="格式化插件neoformat"><a href="#格式化插件neoformat" class="headerlink" title="格式化插件neoformat"></a>格式化插件<a target="_blank" rel="noopener" href="https://github.com/sbdchd/neoformat">neoformat</a></h3><h4 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h4><pre class="line-numbers language-none"><code class="language-none">Plug &#39;sbdchd&#x2F;neoformat&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h4><h5 id="prettier-for-markdown"><a href="#prettier-for-markdown" class="headerlink" title="prettier for markdown"></a><a target="_blank" rel="noopener" href="https://github.com/prettier/prettier">prettier</a> for markdown</h5><p>不要选 remark 作为格式化软件</p>
+<p>arch 可以直接从 aur 安装，其他参考<a target="_blank" rel="noopener" href="https://prettier.io/docs/en/install.html">install prettier</a></p>
+<h5 id="latexindent-pl-for-latex"><a href="#latexindent-pl-for-latex" class="headerlink" title="latexindent.pl for latex"></a><a target="_blank" rel="noopener" href="https://github.com/cmhughes/latexindent.pl">latexindent.pl</a> for latex</h5><p>将项目 clone 到本地</p>
+<p>安装<code>perl</code>，执行<code>sudo cpan</code></p>
+<p>进入<code>cpan</code>环境后，执行</p>
+<pre class="line-numbers language-none"><code class="language-none">install Log::Log4perl
+install Log::Dispatch::File
+install YAML::Tiny
+install File::HomeDir<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>再次 GFW 警告</p>
+<p>进入项目目录，测试 latexindent.pl 是否可以正常运行，并设置为可全局调用（最简单的方式是写个 sh 文件，<code>cd youPathToLatexindent.pl &amp;&amp; ./latexindent.pl</code>，然后将其链接到<code>/bin</code>或者<code>/usr/bin</code>）</p>
+<h4 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h4><p>只需在<code>init.vim</code>中添加</p>
+<pre class="line-numbers language-none"><code class="language-none">let g:neoformat_latex_latexindent &#x3D;&#123;&#39;exe&#39;:&#39;latexindent&#39;,&#39;args&#39;:[],&#39;stdin&#39;:1&#125;
+let g:neoformat_enabled_latex&#x3D;[&#39;latexindent&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>用 prettier 格式化 markdown 失败，笔者暂时未解决该错误，可以使用<a target="_blank" rel="noopener" href="https://github.com/prettier/vim-prettier">vim-prettier</a>插件代替，或者手动运行<code>prettier --wirte pathToYourFile</code></p>
+<p>为不同类型的文件添加格式化快捷键</p>
+<pre class="line-numbers language-none"><code class="language-none">nnoremap &lt;C-l&gt; :Neoformat&lt;CR&gt;
+autocmd FileType markdown nnoremap &lt;buffer&gt; &lt;C-l&gt; :Prettier&lt;CR&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.niuiic.top" rel="external nofollow noreferrer">niuiic</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.niuiic.top/2020/08/04/vim-markdown-latex/">https://www.niuiic.top/2020/08/04/vim-markdown-latex/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://www.niuiic.top" target="_blank">niuiic</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Vim/">
+                                    <span class="chip bg-color">Vim</span>
+                                </a>
+                            
+                                <a href="/tags/Latex/">
+                                    <span class="chip bg-color">Latex</span>
+                                </a>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'XtexzRTxtt9Y1iuPm0YeQOP9-MdYXbMMI',
+        appKey: 'wKBk7protfGIK7GemF8QuCIW',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'say something'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/08/05/gentoo-package-management/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Gentoo Package Management">
+                        
+                        <span class="card-title">Gentoo Package Management</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Gentoo/" class="post-category">
+                                    Gentoo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Gentoo/">
+                        <span class="chip bg-color">Gentoo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/04/gentoo-preface/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Gentoo Preface">
+                        
+                        <span class="card-title">Gentoo Preface</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Gentoo/" class="post-category">
+                                    Gentoo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Gentoo/">
+                        <span class="chip bg-color">Gentoo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: niuiic &#39;s Blog<br />'
+            + '文章作者: niuiic<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">niuiic</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">46.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/niuiic" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:niuiicde@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

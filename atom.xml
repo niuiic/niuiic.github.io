@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>niuiic &#39;s Blog</title>
+  
+  <subtitle>niuiic&#39;s Blog</subtitle>
+  <link href="https://www.niuiic.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.niuiic.top/"/>
+  <updated>2021-06-06T08:06:37.654Z</updated>
+  <id>https://www.niuiic.top/</id>
+  
+  <author>
+    <name>niuiic</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Advanced Tutorial of Vue-Vite-Typescript</title>
+    <link href="https://www.niuiic.top/2021/06/06/advanced-tutorial-of-vue-vite-typescript/"/>
+    <id>https://www.niuiic.top/2021/06/06/advanced-tutorial-of-vue-vite-typescript/</id>
+    <published>2021-06-06T08:04:22.000Z</published>
+    <updated>2021-06-06T08:06:37.654Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Advanced-Tutorial-of-Vue-Vite-Typescript&quot;&gt;&lt;a href=&quot;#Advanced-Tutorial-of-Vue-Vite-Typescript&quot; class=&quot;headerlink&quot; title=&quot;Advanced</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use Custom Snippets in Vim</title>
+    <link href="https://www.niuiic.top/2021/06/05/use-custom-snippets-in-vim/"/>
+    <id>https://www.niuiic.top/2021/06/05/use-custom-snippets-in-vim/</id>
+    <published>2021-06-05T08:18:12.000Z</published>
+    <updated>2021-06-05T14:46:03.605Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-vim-中使用自定义-snippets&quot;&gt;&lt;a href=&quot;#在-vim-中使用自定义-snippets&quot; class=&quot;headerlink&quot; title=&quot;在 vim 中使用自定义 snippets&quot;&gt;&lt;/a&gt;在 vim 中使用自定义</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Create Tauri Project with Vue-Typescript-Less-Vite</title>
+    <link href="https://www.niuiic.top/2021/06/04/create-tauri-project-with-vue-typescript-less-vite/"/>
+    <id>https://www.niuiic.top/2021/06/04/create-tauri-project-with-vue-typescript-less-vite/</id>
+    <published>2021-06-04T06:25:54.000Z</published>
+    <updated>2021-06-04T07:05:32.074Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;创建-Tauri-Vue-Typescript-Vite-Less-应用&quot;&gt;&lt;a href=&quot;#创建-Tauri-Vue-Typescript-Vite-Less-应用&quot; class=&quot;headerlink&quot; title=&quot;创建 Tauri + Vue +</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+    <category term="Tauri" scheme="https://www.niuiic.top/tags/Tauri/"/>
+    
+    <category term="Less" scheme="https://www.niuiic.top/tags/Less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Tutorial of Spartan Edge Accelerator Board</title>
+    <link href="https://www.niuiic.top/2021/06/03/spartan-edge-accelerator-board-tutorial/"/>
+    <id>https://www.niuiic.top/2021/06/03/spartan-edge-accelerator-board-tutorial/</id>
+    <published>2021-06-03T08:57:37.000Z</published>
+    <updated>2021-06-03T14:42:05.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Spartan-Edge-Accelerator-Board-入门教程&quot;&gt;&lt;a href=&quot;#Spartan-Edge-Accelerator-Board-入门教程&quot; class=&quot;headerlink&quot; title=&quot;Spartan Edge</summary>
+        
+      
+    
+    
+    
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
+    
+    
+    <category term="FPGA" scheme="https://www.niuiic.top/tags/FPGA/"/>
+    
+    <category term="Arduino" scheme="https://www.niuiic.top/tags/Arduino/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic Tutorial of Vue-Vite-Typescript</title>
+    <link href="https://www.niuiic.top/2021/05/17/basic-tutorial-of-vue-vite-typescript/"/>
+    <id>https://www.niuiic.top/2021/05/17/basic-tutorial-of-vue-vite-typescript/</id>
+    <published>2021-05-17T14:08:07.000Z</published>
+    <updated>2021-05-17T14:38:18.993Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Basic-Tutorial-of-Vue-Vite-Typescript&quot;&gt;&lt;a href=&quot;#Basic-Tutorial-of-Vue-Vite-Typescript&quot; class=&quot;headerlink&quot; title=&quot;Basic Tutorial of</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Create Vue3 Project</title>
+    <link href="https://www.niuiic.top/2021/05/15/create-vue3-project/"/>
+    <id>https://www.niuiic.top/2021/05/15/create-vue3-project/</id>
+    <published>2021-05-15T14:06:13.000Z</published>
+    <updated>2021-05-19T11:40:52.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;创建-vue3-项目（vue3-vite-typescript-less）&quot;&gt;&lt;a href=&quot;#创建-vue3-项目（vue3-vite-typescript-less）&quot; class=&quot;headerlink&quot; title=&quot;创建 vue3 项目（vue3 +</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
+    
+    
+    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
+    
+    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
+    
+    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
+    
+    <category term="Less" scheme="https://www.niuiic.top/tags/Less/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use Realvnc on Manjaro on rpi4</title>
+    <link href="https://www.niuiic.top/2021/05/15/use-realvnc-on-manjaro-on-rpi4/"/>
+    <id>https://www.niuiic.top/2021/05/15/use-realvnc-on-manjaro-on-rpi4/</id>
+    <published>2021-05-15T13:58:56.000Z</published>
+    <updated>2021-05-15T14:02:27.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在安装-manjaro-系统的树莓派上使用-realvnc&quot;&gt;&lt;a href=&quot;#在安装-manjaro-系统的树莓派上使用-realvnc&quot; class=&quot;headerlink&quot; title=&quot;在安装 manjaro 系统的树莓派上使用</summary>
+        
+      
+    
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/categories/Raspberry-Pi/"/>
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/tags/Raspberry-Pi/"/>
+    
+    <category term="Manjaro" scheme="https://www.niuiic.top/tags/Manjaro/"/>
+    
+    <category term="Realvnc" scheme="https://www.niuiic.top/tags/Realvnc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Install Manjaro on rpi4</title>
+    <link href="https://www.niuiic.top/2021/05/15/install-manjaro-on-rpi4/"/>
+    <id>https://www.niuiic.top/2021/05/15/install-manjaro-on-rpi4/</id>
+    <published>2021-05-15T13:53:05.000Z</published>
+    <updated>2021-05-15T14:02:39.093Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在树莓派-4-上安装-manjaro&quot;&gt;&lt;a href=&quot;#在树莓派-4-上安装-manjaro&quot; class=&quot;headerlink&quot; title=&quot;在树莓派 4 上安装 manjaro&quot;&gt;&lt;/a&gt;在树莓派 4 上安装</summary>
+        
+      
+    
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/categories/Raspberry-Pi/"/>
+    
+    
+    <category term="Raspberry Pi" scheme="https://www.niuiic.top/tags/Raspberry-Pi/"/>
+    
+    <category term="Manjaro" scheme="https://www.niuiic.top/tags/Manjaro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rust Tauri &quot;Hello World&quot;</title>
+    <link href="https://www.niuiic.top/2021/05/11/rust-tauri-hello-world/"/>
+    <id>https://www.niuiic.top/2021/05/11/rust-tauri-hello-world/</id>
+    <published>2021-05-11T12:14:05.000Z</published>
+    <updated>2021-05-11T14:25:32.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Rust-Tauri-“Hello-World”&quot;&gt;&lt;a href=&quot;#Rust-Tauri-“Hello-World”&quot; class=&quot;headerlink&quot; title=&quot;Rust Tauri “Hello World”&quot;&gt;&lt;/a&gt;Rust Tauri</summary>
+        
+      
+    
+    
+    
+    <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
+    
+    
+    <category term="Tauri" scheme="https://www.niuiic.top/tags/Tauri/"/>
+    
+    <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Better Highlight for Go Files in Vim</title>
+    <link href="https://www.niuiic.top/2021/04/28/better-highlight-for-go-files-in-vim/"/>
+    <id>https://www.niuiic.top/2021/04/28/better-highlight-for-go-files-in-vim/</id>
+    <published>2021-04-28T13:46:41.000Z</published>
+    <updated>2021-04-28T14:13:36.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;vim-中更好的-go-语言高亮&quot;&gt;&lt;a href=&quot;#vim-中更好的-go-语言高亮&quot; class=&quot;headerlink&quot; title=&quot;vim 中更好的 go 语言高亮&quot;&gt;&lt;/a&gt;vim 中更好的 go 语言高亮&lt;/h1&gt;&lt;p&gt;本文主要说明如何解决 go</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Better Use of Rust on Gentoo</title>
+    <link href="https://www.niuiic.top/2021/04/24/better-use-of-rust-on-gentoo/"/>
+    <id>https://www.niuiic.top/2021/04/24/better-use-of-rust-on-gentoo/</id>
+    <published>2021-04-24T13:26:57.000Z</published>
+    <updated>2021-04-24T13:47:26.895Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-gentoo-上更好地使用-rust&quot;&gt;&lt;a href=&quot;#在-gentoo-上更好地使用-rust&quot; class=&quot;headerlink&quot; title=&quot;在 gentoo 上更好地使用 rust&quot;&gt;&lt;/a&gt;在 gentoo 上更好地使用</summary>
+        
+      
+    
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim File Encoding</title>
+    <link href="https://www.niuiic.top/2021/04/18/vim-file-encoding/"/>
+    <id>https://www.niuiic.top/2021/04/18/vim-file-encoding/</id>
+    <published>2021-04-18T08:10:41.000Z</published>
+    <updated>2021-04-18T08:21:20.464Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vim-文件编码&quot;&gt;&lt;a href=&quot;#Vim-文件编码&quot; class=&quot;headerlink&quot; title=&quot;Vim 文件编码&quot;&gt;&lt;/a&gt;Vim 文件编码&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim 文件编码，主要解决中文乱码问题。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim Quickfix</title>
+    <link href="https://www.niuiic.top/2021/04/17/vim-quickfix/"/>
+    <id>https://www.niuiic.top/2021/04/17/vim-quickfix/</id>
+    <published>2021-04-17T13:01:56.000Z</published>
+    <updated>2021-05-10T07:14:26.102Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vim-Quickfix&quot;&gt;&lt;a href=&quot;#Vim-Quickfix&quot; class=&quot;headerlink&quot; title=&quot;Vim Quickfix&quot;&gt;&lt;/a&gt;Vim Quickfix&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim quickfix</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Install rpm/deb Packages on Gentoo</title>
+    <link href="https://www.niuiic.top/2021/03/23/install-rpm-deb-packages-on-gentoo/"/>
+    <id>https://www.niuiic.top/2021/03/23/install-rpm-deb-packages-on-gentoo/</id>
+    <published>2021-03-23T10:28:40.000Z</published>
+    <updated>2021-03-23T11:11:18.585Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-gentoo-系统上“安装”-deb-rpm-包&quot;&gt;&lt;a href=&quot;#在-gentoo-系统上“安装”-deb-rpm-包&quot; class=&quot;headerlink&quot; title=&quot;在 gentoo 系统上“安装” deb/rpm 包&quot;&gt;&lt;/a&gt;在</summary>
+        
+      
+    
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Debug Msp430g2 Project on Linux</title>
+    <link href="https://www.niuiic.top/2021/03/23/debug-msp430g2-project-on-linux/"/>
+    <id>https://www.niuiic.top/2021/03/23/debug-msp430g2-project-on-linux/</id>
+    <published>2021-03-23T10:26:43.000Z</published>
+    <updated>2021-05-31T08:33:54.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-linux-上-对-MSP430G2-系列工程进行调试&quot;&gt;&lt;a href=&quot;#在-linux-上-对-MSP430G2-系列工程进行调试&quot; class=&quot;headerlink&quot; title=&quot;在 linux 上 对 MSP430G2</summary>
+        
+      
+    
+    
+    
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
+    
+    
+    <category term="MSP430G2" scheme="https://www.niuiic.top/tags/MSP430G2/"/>
+    
+    <category term="Linux" scheme="https://www.niuiic.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Build aarch64 Cross Toolchain on Gentoo with Crossdev</title>
+    <link href="https://www.niuiic.top/2021/03/23/build-aarch64-cross-toolchain-on-gentoo-with-crossdev/"/>
+    <id>https://www.niuiic.top/2021/03/23/build-aarch64-cross-toolchain-on-gentoo-with-crossdev/</id>
+    <published>2021-03-23T10:23:01.000Z</published>
+    <updated>2021-03-23T11:11:18.575Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;gentoo-使用-crossdev-建立-aarch64-交叉编译链&quot;&gt;&lt;a href=&quot;#gentoo-使用-crossdev-建立-aarch64-交叉编译链&quot; class=&quot;headerlink&quot; title=&quot;gentoo 使用 crossdev 建立</summary>
+        
+      
+    
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Develop Stm32 Project with Rust</title>
+    <link href="https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/"/>
+    <id>https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/</id>
+    <published>2021-03-23T10:19:56.000Z</published>
+    <updated>2021-05-31T08:34:10.063Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用-rust-开发-stm32&quot;&gt;&lt;a href=&quot;#使用-rust-开发-stm32&quot; class=&quot;headerlink&quot; title=&quot;使用 rust 开发 stm32&quot;&gt;&lt;/a&gt;使用 rust 开发 stm32&lt;/h1&gt;&lt;p&gt;本文介绍如何用 rust</summary>
+        
+      
+    
+    
+    
+    <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
+    
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
+    
+    
+    <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
+    
+    <category term="Stm32" scheme="https://www.niuiic.top/tags/Stm32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Install Oracle Jdk and Jre on Gentoo</title>
+    <link href="https://www.niuiic.top/2021/03/23/install-oracle-jdk-and-jre-on-gentoo/"/>
+    <id>https://www.niuiic.top/2021/03/23/install-oracle-jdk-and-jre-on-gentoo/</id>
+    <published>2021-03-23T10:14:01.000Z</published>
+    <updated>2021-03-23T11:11:18.585Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Gentoo系统安装Oracle-jdk和jre&quot;&gt;&lt;a href=&quot;#Gentoo系统安装Oracle-jdk和jre&quot; class=&quot;headerlink&quot; title=&quot;Gentoo系统安装Oracle</summary>
+        
+      
+    
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/categories/Gentoo/"/>
+    
+    
+    <category term="Gentoo" scheme="https://www.niuiic.top/tags/Gentoo/"/>
+    
+    <category term="Java" scheme="https://www.niuiic.top/tags/Java/"/>
+    
+    <category term="Oracle" scheme="https://www.niuiic.top/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim Fuzzy Search Plugin</title>
+    <link href="https://www.niuiic.top/2021/03/23/vim-fuzzy-search-plugin/"/>
+    <id>https://www.niuiic.top/2021/03/23/vim-fuzzy-search-plugin/</id>
+    <published>2021-03-23T08:48:00.000Z</published>
+    <updated>2021-03-23T11:59:51.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;vim-模糊搜索&quot;&gt;&lt;a href=&quot;#vim-模糊搜索&quot; class=&quot;headerlink&quot; title=&quot;vim 模糊搜索&quot;&gt;&lt;/a&gt;vim 模糊搜索&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim 高性能模糊查找插件 vim-clap。另外也推荐尝试</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim Clipboard History Plugin</title>
+    <link href="https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/"/>
+    <id>https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/</id>
+    <published>2021-03-23T08:46:32.000Z</published>
+    <updated>2021-03-23T11:11:18.585Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;a href=&quot;#vim剪贴板历史记录插件&quot; class=&quot;headerlink&quot; title=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;/a&gt;vim剪贴板历史记录插件&lt;/h1&gt;&lt;p&gt;本文介绍 vim 剪贴板历史管理插件。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+</feed>
