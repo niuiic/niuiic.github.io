@@ -479,21 +479,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-05
+                    2021-06-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -519,7 +519,9 @@
                 <h1 id="使用-vim-作为-systemverilog-编辑器"><a href="#使用-vim-作为-systemverilog-编辑器" class="headerlink" title="使用 vim 作为 systemverilog 编辑器"></a>使用 vim 作为 systemverilog 编辑器</h1><p>本文介绍如何使用 vim 搭建 systemverilog 编辑环境。功能包括自动补全、语法高亮、语法检查、格式化等。</p>
 <p>注意本文内容只是针对 systemverilog 提供最基本编辑体验。关于 vim 的其他功能配置，请见<a href="https://www.niuiic.top/categories/Vim/">vim 专栏</a>。</p>
 <h2 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h2><p>最新版的 neovim 应该默认支持 systemverilog 语法高亮。如果你的 vim 不行的话可以尝试通过安装<code>vhda/verilog_systemverilog.vim</code>插件解决。</p>
-<h2 id="自动补全与语法检查"><a href="#自动补全与语法检查" class="headerlink" title="自动补全与语法检查"></a>自动补全与语法检查</h2><p>自动补全功能使用 lsp。本文选用 svls 作为 systemverilog 的语言服务器。</p>
+<h2 id="自动补全与语法检查"><a href="#自动补全与语法检查" class="headerlink" title="自动补全与语法检查"></a>自动补全与语法检查</h2><p>更新：使用 svlangserver 代替 svls。</p>
+<p>svlangserver 是一个相当新的 lsp，其优点包括实现了定义跳转功能、使用 verilator 编译器进行语法检查、模块调用时提示模块端口、有自带的 snippets（好像暂时不能用）、格式化文档等。虽然它还存在一定问题，但比起 svls 功能更多，值得期待其后续版本。总的来说 svls 语法检查能力可能更强，其他的比不上 svlangserver，然而语法检查最终还是要靠编译器或者 IDE，所以还是建议使用后者。</p>
+<h3 id="使用-svls"><a href="#使用-svls" class="headerlink" title="使用 svls"></a>使用 svls</h3><p>自动补全功能使用 lsp。本文选用 svls 作为 systemverilog 的语言服务器。</p>
 <p>svls 使用 rust 语言编写，需要 rust 语言环境，使用 rust 包管理器 cargo 安装。或者可以从 snap 商店下载。</p>
 <p>选择一款管理调用 lsp 的 vim 插件。本文选用 coc.nvim。在 coc.nvim 的配置文件中添加以下内容。</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"languageserver"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
@@ -540,8 +542,26 @@
 
 <p>将以上<code>include_paths</code>的值修改为要编写的.sv 文件所在目录即可。</p>
 <p>关于语法检查功能，可以同时使用 ale 插件。该插件可以通过 iverilog 编译器提供错误信息，两者错误信息并不完全重合。</p>
-<p>虽然在<code>svls</code>的演示视频中存在 snippets 的补全画面，但是经过试用发现这似乎是其他插件提供的。但是<code>vim-snippets</code>插件提供的 snippets 非常不全，因此下面介绍简单的自定义 snippets。</p>
-<p>首先，需要<code>coc-snippets</code>插件，该插件依赖<code>coc.nvim</code>。安装好<code>coc.nvim</code>之后，只需要使用<code>:CocInstall coc-snippets</code>命令即可安装。具体设置可以参考其<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc-snippets">github 主页</a>。安装该插件后需要同步安装<code>honza/vim-snippets</code>来提供 snippets。<code>SirVer/ultisnips</code>需要拆卸掉，因为该插件会对自定义的 snippets 文件报错。</p>
+<p>虽然在<code>svls</code>的演示视频中存在 snippets 的补全画面，但是经过试用发现这其实是其他插件提供的。由于<code>vim-snippets</code>插件提供的 snippets 非常不全，因此之后会介绍简单的自定义 snippets。</p>
+<h3 id="使用-svlangserver"><a href="#使用-svlangserver" class="headerlink" title="使用 svlangserver"></a>使用 svlangserver</h3><p><code>npm install -g @imc-trading/svlangserver</code></p>
+<p>继续安装<code>verilator</code>以及<a target="_blank" rel="noopener" href="https://github.com/google/verible">google/verible</a>。</p>
+<p>在 coc.nvim 的配置文件中设置如下。下面的路径修改成自己的位置。</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token property">"languageserver"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">"svlangserver"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"module"</span><span class="token operator">:</span> <span class="token string">"/home/niuiic/Applicants/Npm/npm_global/lib64/node_modules/@imc-trading/svlangserver/lib/svlangserver.js"</span><span class="token punctuation">,</span>
+    <span class="token property">"filetypes"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"systemverilog"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"settings"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token property">"systemverilog.includeIndexing"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"**/*.&#123;sv,svh&#125;"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"systemverilog.excludeIndexing"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"test/**/*.sv*"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"systemverilog.defines"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"systemverilog.launchConfiguration"</span><span class="token operator">:</span> <span class="token string">"/usr/bin/verilator -sv -Wall --lint-only"</span><span class="token punctuation">,</span>
+      <span class="token property">"systemverilog.formatCommand"</span><span class="token operator">:</span> <span class="token string">"/home/niuiic/Applicants/Verible/verible/bin/verible-verilog-format"</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>后续可以使用<code>:Format</code>来调用格式化工具。</p>
+<h3 id="自定义-snippets"><a href="#自定义-snippets" class="headerlink" title="自定义 snippets"></a>自定义 snippets</h3><p>首先，需要<code>coc-snippets</code>插件，该插件依赖<code>coc.nvim</code>。安装好<code>coc.nvim</code>之后，只需要使用<code>:CocInstall coc-snippets</code>命令即可安装。具体设置可以参考其<a target="_blank" rel="noopener" href="https://github.com/neoclide/coc-snippets">github 主页</a>。安装该插件后需要同步安装<code>honza/vim-snippets</code>来提供 snippets。<code>SirVer/ultisnips</code>需要拆卸掉，因为该插件会对自定义的 snippets 文件报错。</p>
 <p>接下来，使用<code>:CocConfig</code>打开<code>coc.nvim</code>配置文件，设置自定义 snippets 文件路径。如<code>&quot;snippets.userSnippetsDirectory&quot;: &quot;/home/niuiic/.config/nvim/snippets&quot;</code>。（注意这是个 json 文件，最外层需要花括号）</p>
 <p>然后就可以在该目录下自定义 snippets 文件，文件名称保持和文件类型相同即可。snippets 语法还是比较复杂的，下面给出一个简单例子，足以实现基本功能。更高级的功能请自行学习。（coc.nvim 提供的自动补全筛选能力已经足够强大，即使是简单的设置也可以带来极佳的体验。更复杂的设置个人觉得没有必要。）</p>
 <p><code>systemverilog.snippets</code></p>
@@ -561,6 +581,7 @@ snippet alw
 
 <p>此时光标会停留在<code>$&#123;1&#125;</code>的位置。</p>
 <p>按照上述例子继续补充自己想要的 snippets 即可。注意标准写法中应当是用<code>endsnippet</code>的，不过这插件似乎不需要这个，而且加上这一句之后反而会出现在补全内容中，因此还是不加为好。</p>
+<p>此外，可以复制<a target="_blank" rel="noopener" href="https://github.com/imc-trading/svlangserver">svlangserver 仓库</a>中的 snippets 来使用。</p>
 <p>除了 snippets，svls 能提供的自动补全功能感觉还是差点意思的。继续使用<code>coc.nvim</code>定义自动补全库。</p>
 <p>新建目录<code>～/.config/nvim/autoload/coc/source</code>。在该目录下新建文件<code>systemverilog.vim</code>，文件名原则同上。</p>
 <p>内容如下。</p>
@@ -578,7 +599,8 @@ endfunction<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 
 <p>在<code>items</code>中添加需要补全的关键词即可。注意这里的补全内容不能解析任何换行字符或转译字符，所以关键词放这里，语句放之前的 snippets。</p>
 <p>至此，完成自动补全与语法检查功能的配置。</p>
-<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p>systemverilog 的格式化需要<a target="_blank" rel="noopener" href="https://github.com/google/verible">verible</a>的支持。verible 为 google 为 systemverilog 开发的一套工具集，其中包含了格式化工具。</p>
+<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p>注意，使用 svlangserver 不需要再额外配置格式化。</p>
+<p>systemverilog 的格式化需要<a target="_blank" rel="noopener" href="https://github.com/google/verible">verible</a>的支持。verible 为 google 为 systemverilog 开发的一套工具集，其中包含了格式化工具。</p>
 <p>verible 提供了.deb 和.rpm 的二进制包，包管理系统兼容该两种打包方式的用户可以直接安装。</p>
 <p>其他用户需要自行编译，从 github 上拉取源码后，在源码目录使用<code>bazel build -c opt //...</code>编译。注意需要支持 C++11 的 gcc 编译器（clang 暂时无法编译成功）。</p>
 <p>编译完成后，使用<code>bazel run -c opt :install -- path</code>安装到指定位置。如果安装位置需要 root 权限，则使用<code>bazel run -c opt :install -- -s path</code>，务必注意不能使用 sudo。</p>
@@ -1254,7 +1276,7 @@ endfunction<span aria-hidden="true" class="line-numbers-rows"><span></span><span
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.2k</span>&nbsp;字
+                class="white-color">46.5k</span>&nbsp;字
             
             
             
