@@ -498,7 +498,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    1.8k
                 </div>
                 
 
@@ -538,6 +538,9 @@
 <p>iverilog 的仿真速度尚可，个人感觉比 vivado 快不少。关于 iverilog 搭配 gtkwave 的用法只要在网上稍微一搜就能找到，本文不赘述。</p>
 <p>systemverilog 用户建议使用 verilator。原因有 iverilog 对 systemverilog 的支持还是不怎么样，另外 verilator 的速度要快的多，其自称是世界上最快的仿真器。</p>
 <p>verilator 将 systemverilog 转化为 C++模型，利用多线程 C++进行仿真。因此它的速度很快，但也由于这个原理，用户需要用 C++编写测试文件。</p>
+<blockquote>
+<p>iverilog 和 verilator 是开源世界中最受欢迎的两个仿真器。虽然不太清楚其仿真结果是否会被承认，但其仿真通过的程序用商用仿真软件进行仿真几乎不会出问题。所以大不了最后用商用软件仿真一次出个结果。</p>
+</blockquote>
 <p>下面来看一个案例。</p>
 <pre class="line-numbers language-systemverilog" data-language="systemverilog"><code class="language-systemverilog">&#x2F;&#x2F; Demo.sv
 
@@ -603,9 +606,7 @@ vluint64_t main_time <span class="token operator">=</span> <span class="token nu
 <li>怎么使用该程序</li>
 </ol>
 <p>执行命令<code>verilator --cc Demo.sv --trace --exe sim_main.cpp &amp;&amp; make -j $(nproc) -C ./obj_dir -f VDemo.mk VDemo</code>。</p>
-<blockquote>
-<p>$(nproc)表示计算机的最大线程数。比如 4 核 8 线程，则为 -j 8。该设置为程序编译时使用的线程数，建议设置为$(nproc)，可以减少，但最好不要增加。</p>
-</blockquote>
+<p><code>$(nproc)</code>表示计算机的最大线程数。比如 4 核 8 线程，则为 <code>-j 8</code>。该设置为程序编译时使用的线程数，建议设置为<code>$(nproc)</code>，可以减少，但最好不要增加。</p>
 <p>以上命令将生成可执行文件，文件为<code>obj_dir/VDemo</code>。</p>
 <p>运行该文件即可看到输出，如果仿真有波形，则会输出波形<code>obj_dir/VDemo.vcd</code>。然后使用<code>gtkwave obj_dir/VDemo.vcd</code>即可查看波形。</p>
 <ol start="3">
@@ -626,7 +627,7 @@ vluint64_t main_time <span class="token operator">=</span> <span class="token nu
 <p>关于仿真测试文件的写法，在 verilator 的安装目录（通常为<code>/usr/share/verilator/examples</code>）中还有不少案例文件。</p>
 <h2 id="优化仿真流程"><a href="#优化仿真流程" class="headerlink" title="优化仿真流程"></a>优化仿真流程</h2><p>仿真流程为整个开发流程的重中之重。下面介绍一些工具以提升仿真体验。</p>
 <p>自制一个脚本来初始化项目。</p>
-<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">sourcefile&#x3D;&quot;demo.sv&quot;
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sourcefile&#x3D;&quot;demo.sv&quot;
 exe&#x3D;&quot;Vdemo&quot;
 simfile&#x3D;&quot;sim_main.cpp&quot;
 buildcmd&#x3D;&quot;verilator --cc $sourcefile --trace&quot;
