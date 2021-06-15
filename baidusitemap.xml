@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.niuiic.top/2021/06/15/develop-fpga-on-linux/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.niuiic.top/2020/08/07/gentoo-basic-system-installation/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
     <loc>https://www.niuiic.top/2021/03/23/use-vim-as-the-editor-of-systemverilog/</loc>
     <lastmod>2021-06-14</lastmod>
   </url>
@@ -150,10 +158,6 @@
   </url>
   <url>
     <loc>https://www.niuiic.top/2021/03/23/build-aarch64-cross-toolchain-on-gentoo-with-crossdev/</loc>
-    <lastmod>2021-03-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.niuiic.top/2020/08/07/gentoo-basic-system-installation/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
 </urlset> 

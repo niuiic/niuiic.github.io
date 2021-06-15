@@ -6,7 +6,7 @@
   <link href="https://www.niuiic.top/atom.xml" rel="self"/>
   
   <link href="https://www.niuiic.top/"/>
-  <updated>2021-06-06T08:06:37.654Z</updated>
+  <updated>2021-06-15T05:25:27.605Z</updated>
   <id>https://www.niuiic.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Develop FPGA on Linux</title>
+    <link href="https://www.niuiic.top/2021/06/15/develop-fpga-on-linux/"/>
+    <id>https://www.niuiic.top/2021/06/15/develop-fpga-on-linux/</id>
+    <published>2021-06-15T02:46:55.000Z</published>
+    <updated>2021-06-15T05:25:27.605Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-linux-下开发-FPGA&quot;&gt;&lt;a href=&quot;#在-linux-下开发-FPGA&quot; class=&quot;headerlink&quot; title=&quot;在 linux 下开发 FPGA&quot;&gt;&lt;/a&gt;在 linux 下开发 FPGA&lt;/h1&gt;&lt;p&gt;本文介绍如何在 linux</summary>
+        
+      
+    
+    
+    
+    <category term="FPGA" scheme="https://www.niuiic.top/categories/FPGA/"/>
+    
+    <category term="Linux" scheme="https://www.niuiic.top/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://www.niuiic.top/tags/Linux/"/>
+    
+    <category term="FPGA" scheme="https://www.niuiic.top/tags/FPGA/"/>
+    
+    <category term="Systemverilog" scheme="https://www.niuiic.top/tags/Systemverilog/"/>
+    
+    <category term="verilator" scheme="https://www.niuiic.top/tags/verilator/"/>
+    
+  </entry>
   
   <entry>
     <title>Advanced Tutorial of Vue-Vite-Typescript</title>
@@ -524,32 +557,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;vim-模糊搜索&quot;&gt;&lt;a href=&quot;#vim-模糊搜索&quot; class=&quot;headerlink&quot; title=&quot;vim 模糊搜索&quot;&gt;&lt;/a&gt;vim 模糊搜索&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim 高性能模糊查找插件 vim-clap。另外也推荐尝试</summary>
-        
-      
-    
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
-    
-    
-    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Clipboard History Plugin</title>
-    <link href="https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/"/>
-    <id>https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/</id>
-    <published>2021-03-23T08:46:32.000Z</published>
-    <updated>2021-03-23T11:11:18.585Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;a href=&quot;#vim剪贴板历史记录插件&quot; class=&quot;headerlink&quot; title=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;/a&gt;vim剪贴板历史记录插件&lt;/h1&gt;&lt;p&gt;本文介绍 vim 剪贴板历史管理插件。&lt;/p&gt;
-&lt;h2</summary>
         
       
     
