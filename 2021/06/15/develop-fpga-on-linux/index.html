@@ -491,7 +491,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-15
+                    2021-06-16
                 </div>
                 
 
@@ -637,7 +637,7 @@ if [ $1 &#x3D;&#x3D; &quot;run&quot; ]; then
     eval $runcmd &amp;&gt;&#x2F;dev&#x2F;null
     cd .&#x2F;obj_dir
     eval &quot;.&#x2F;$exe&quot;
-    if [ -f &quot;wave.vcd&quot; ]; then
+    if [ -f &quot;$exe.vcd&quot; ]; then
         gtkwave &quot;.&#x2F;$exe.vcd&quot;
     fi
 elif [ $1 &#x3D;&#x3D; &quot;build&quot; ]; then
@@ -649,7 +649,7 @@ elif [ $1 &#x3D;&#x3D; &quot;clean&quot; ]; then
         rm obj_dir
     fi
 elif [ $1 &#x3D;&#x3D; &quot;watch&quot; ]; then
-    if [ -f &quot;wave.vcd&quot; ]; then
+    if [ -f &quot;$exe.vcd&quot; ]; then
         cd .&#x2F;obj_dir
         gtkwave &quot;.&#x2F;$exe.vcd&quot;
     else
@@ -722,7 +722,7 @@ fi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
 <li>clean：清理。</li>
 <li>watch：查看波形图。</li>
 </ol>
-<p>更进一步，使用 vim 的用户可以参考<a href="https://www.niuiic.top/2021/04/17/vim-quickfix/">另一篇文章</a>，将以上内容与 vim quickfix, asynctasks 结合，实现用快捷键完成整个仿真流程。</p>
+<p>更进一步，使用 vim 的用户可以参考<a href="https://www.niuiic.top/2021/04/17/vim-quickfix/">另一片文章</a>，将以上内容与 vim quickfix, asynctasks 结合，实现用快捷键完成整个仿真流程。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>根据以上内容，理清 linux 下开发 FPGA 的一种流程。</p>
 <ol>
 <li>使用 IDE 创建项目。</li>
