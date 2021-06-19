@@ -487,35 +487,6 @@
   </entry>
   
   <entry>
-    <title>Develop Stm32 Project with Rust</title>
-    <link href="https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/"/>
-    <id>https://www.niuiic.top/2021/03/23/develop-stm32-project-with-rust/</id>
-    <published>2021-03-23T10:19:56.000Z</published>
-    <updated>2021-05-31T08:34:10.063Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;使用-rust-开发-stm32&quot;&gt;&lt;a href=&quot;#使用-rust-开发-stm32&quot; class=&quot;headerlink&quot; title=&quot;使用 rust 开发 stm32&quot;&gt;&lt;/a&gt;使用 rust 开发 stm32&lt;/h1&gt;&lt;p&gt;本文介绍如何用 rust</summary>
-        
-      
-    
-    
-    
-    <category term="Rust" scheme="https://www.niuiic.top/categories/Rust/"/>
-    
-    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
-    
-    
-    <category term="Rust" scheme="https://www.niuiic.top/tags/Rust/"/>
-    
-    <category term="Stm32" scheme="https://www.niuiic.top/tags/Stm32/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Install Oracle Jdk and Jre on Gentoo</title>
     <link href="https://www.niuiic.top/2021/03/23/install-oracle-jdk-and-jre-on-gentoo/"/>
     <id>https://www.niuiic.top/2021/03/23/install-oracle-jdk-and-jre-on-gentoo/</id>
@@ -557,6 +528,32 @@
         
         
     <summary type="html">&lt;h1 id=&quot;vim-模糊搜索&quot;&gt;&lt;a href=&quot;#vim-模糊搜索&quot; class=&quot;headerlink&quot; title=&quot;vim 模糊搜索&quot;&gt;&lt;/a&gt;vim 模糊搜索&lt;/h1&gt;&lt;p&gt;本文主要介绍 vim 高性能模糊查找插件 vim-clap。另外也推荐尝试</summary>
+        
+      
+    
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/categories/Vim/"/>
+    
+    
+    <category term="Vim" scheme="https://www.niuiic.top/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim Clipboard History Plugin</title>
+    <link href="https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/"/>
+    <id>https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/</id>
+    <published>2021-03-23T08:46:32.000Z</published>
+    <updated>2021-03-23T11:11:18.585Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;a href=&quot;#vim剪贴板历史记录插件&quot; class=&quot;headerlink&quot; title=&quot;vim剪贴板历史记录插件&quot;&gt;&lt;/a&gt;vim剪贴板历史记录插件&lt;/h1&gt;&lt;p&gt;本文介绍 vim 剪贴板历史管理插件。&lt;/p&gt;
+&lt;h2</summary>
         
       
     
