@@ -6,7 +6,7 @@
   <link href="https://www.niuiic.top/atom.xml" rel="self"/>
   
   <link href="https://www.niuiic.top/"/>
-  <updated>2021-06-20T00:23:07.035Z</updated>
+  <updated>2021-06-24T03:31:04.606Z</updated>
   <id>https://www.niuiic.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Develop Stm8 on Linux</title>
+    <link href="https://www.niuiic.top/2021/06/23/develop-stm8-on-linux/"/>
+    <id>https://www.niuiic.top/2021/06/23/develop-stm8-on-linux/</id>
+    <published>2021-06-23T07:20:26.000Z</published>
+    <updated>2021-06-24T03:31:04.606Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在-linux-上开发-stm8&quot;&gt;&lt;a href=&quot;#在-linux-上开发-stm8&quot; class=&quot;headerlink&quot; title=&quot;在 linux 上开发 stm8&quot;&gt;&lt;/a&gt;在 linux 上开发 stm8&lt;/h1&gt;&lt;p&gt;本文介绍如何在</summary>
+        
+      
+    
+    
+    
+    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
+    
+    
+    <category term="Linux" scheme="https://www.niuiic.top/tags/Linux/"/>
+    
+    <category term="Stm8" scheme="https://www.niuiic.top/tags/Stm8/"/>
+    
+  </entry>
   
   <entry>
     <title>Develop Stm32 with Rust stm32f3discovery-can-rtic</title>
@@ -594,37 +621,6 @@
     <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
     
     <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Create Vue3 Project</title>
-    <link href="https://www.niuiic.top/2021/05/15/create-vue3-project/"/>
-    <id>https://www.niuiic.top/2021/05/15/create-vue3-project/</id>
-    <published>2021-05-15T14:06:13.000Z</published>
-    <updated>2021-05-19T11:40:52.113Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;创建-vue3-项目（vue3-vite-typescript-less）&quot;&gt;&lt;a href=&quot;#创建-vue3-项目（vue3-vite-typescript-less）&quot; class=&quot;headerlink&quot; title=&quot;创建 vue3 项目（vue3 +</summary>
-        
-      
-    
-    
-    
-    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
-    
-    
-    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
-    
-    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
-    
-    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
-    
-    <category term="Less" scheme="https://www.niuiic.top/tags/Less/"/>
     
   </entry>
   
