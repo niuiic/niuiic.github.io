@@ -619,13 +619,13 @@ ninja<span aria-hidden="true" class="line-numbers-rows"><span></span><span></spa
 <p>另开一个终端，再次进入到 build 目录下。</p>
 <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">stm8-gdb
 target extended-remote :3333
-moniter reset halt
+monitor reset halt
 file main.ihx
 load<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>建议把每次必用的 gdb 命令写入<code>debug.gdb</code>。</p>
 <pre class="line-numbers language-none"><code class="language-none">target extended-remote :3333
-moniter reset halt
+monitor reset halt
 file main.ihx
 load<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
@@ -1093,12 +1093,12 @@ load<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Rust/" class="post-category">
-                                    Rust
-                                </a>
-                            
                             <a href="/categories/Embedded/" class="post-category">
                                     Embedded
+                                </a>
+                            
+                            <a href="/categories/Rust/" class="post-category">
+                                    Rust
                                 </a>
                             
                             <a href="/categories/Stm32/" class="post-category">
