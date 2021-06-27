@@ -479,14 +479,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-24
+                    2021-06-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    842
+                    831
                 </div>
                 
 
@@ -533,7 +533,6 @@
 <p>编译之前先安装好 python3.6。如果是 python3.7 及以上版本则无法正常编译。原因是 gdb8.1 使用的一个 python 函数在 python3.7 中被修改。</p>
 <p>将<code>configure_binutils.sh</code>文件中最后一行改为<code>./configure --host=$_HOST --target=stm8-none-elf32 $_PREFIX --program-prefix=stm8- --with-python=python3.6</code>。</p>
 <p>然后按照 README 中的提示进行编译即可。</p>
-<p><code>sudo openocd -f interface/stlink-dap.cfg -f target/stm8s105.cfg</code></p>
 <h3 id="openocd"><a href="#openocd" class="headerlink" title="openocd"></a>openocd</h3><p>使用 openocd 驱动仿真器。</p>
 <h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><p>编辑器随意，建议 vim 或者 emacs。如果使用 vscode，可以尝试用其 stm8 debugger 插件（似乎是 windows only，没用过，可试一下）。</p>
 <h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><h3 id="库文件"><a href="#库文件" class="headerlink" title="库文件"></a>库文件</h3><p>由于权限限制，sdcc 并没有集成 stm8 的库，可以去 st 官网下载。</p>
