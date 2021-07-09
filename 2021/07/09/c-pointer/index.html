@@ -482,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    13 分
                 </div>
                 
 
@@ -586,7 +586,44 @@
 <p>无论是<code>pn</code>还是<code>pdn</code>，它们使用了<code>++</code>运算符来指向下一个元素。可是问题是什么？int 和 double 类型的大小并不一致。那为什么两个指针<code>+1</code>后都可以正确地指向下一个元素呢？</p>
 <p>回顾一下上文对数据类型的设定。我们来对指针也进行设定。</p>
 <p>首先指针是一种数据类型，所以它也是<code>占据的内存大小 + 独有的解析方式</code>。指针在 64 位系统上的大小是 8 个字节。不管是<code>int *</code>还是<code>double *</code>，大小都是一样的。这里就要指出，不要把<code>int *</code>看作一种类型。指针就是指针，其本身就是一种类型。你可以把整型指针中整型看作指针类型的修饰符，或者更形象一点，整型指针属于指针科整型属。</p>
-<p>然后，指针所管辖的单位内存长度由修饰符<code>int</code>决定。<code>int</code>修饰的指针指向内存 100，单位操作区域长度为 4 个字节，为 100、101、102、103。当指针加 1 时，就进入下一个单位操作区域，也就是前进 4 个字节。这里就可以解释为什么说不要把<code>int *</code>看作一种类型。假设我有一个类型叫<code>tni</code>，它也是 4 个字节。那<code>tni *</code>和<code>int *</code>的区别在哪里呢？其他都一样，只是<code>独有的解析方式</code>有差异。但这种差异是可以通过使用方式抹平的。比如<code>int</code>要用<code>%d</code>打印，<code>tni</code>也可以用<code>%d</code>打印，只要两者的二进制值一样，打印出来就是一样的。</p>
+<p>然后，指针所管辖的单位内存长度由修饰符<code>int</code>决定。<code>int</code>修饰的指针指向内存 100，单位操作区域长度为 4 个字节，为 100、101、102、103。当指针加 1 时，就进入下一个单位操作区域，也就是前进 4 个字节。这里就可以解释为什么说不要把<code>int *</code>看作一种类型。假设我有一个类型叫<code>tni</code>，它也是 4 个字节。那<code>tni *</code>和<code>int *</code>的区别在哪里呢？其他都一样，只是<code>独有的解析方式</code>有差异。但这种差异是可以通过使用方式抹平的（部分会受到编译器的限制）。比如<code>int</code>要用<code>%d</code>打印，<code>tni</code>也可以用<code>%d</code>打印，只要两者的二进制值一样，打印出来就是一样的。</p>
+<p>这里举两个例子。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">chars</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">char</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> c<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> d<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token operator">*</span> chars<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">0x61626364</span><span class="token punctuation">;</span>
+  chars s <span class="token operator">=</span> <span class="token operator">&amp;</span>num<span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"s.a=%c s.b=%c s.c=%c s.d=%c"</span><span class="token punctuation">,</span> s<span class="token operator">-></span>a<span class="token punctuation">,</span> s<span class="token operator">-></span>b<span class="token punctuation">,</span> s<span class="token operator">-></span>c<span class="token punctuation">,</span> s<span class="token operator">-></span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果为<code>s.a=d s.b=c s.c=b s.d=a</code>。这里结构体的字段与对应的地址是反着排的。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">chars</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">char</span> a<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> c<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> d<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token operator">*</span> chars<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> nums <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  chars s <span class="token operator">=</span> nums<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">7</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>s<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在这里<code>printf</code>语法是无法正确执行的，因为<code>chars*</code>类型不能用这种格式打印。但是<code>s++</code>每次的地址依旧是整型数组中每一个元素的地址。</p>
 <p>所以这里做个总结，指针<code>type *</code>的本质是<code>占据内存长度为8个字节的变量，其单位操作区域为 sizeof(type) 个字节，其管辖区域存放的值将用type类型的形式进行解析</code>。</p>
 <blockquote>
 <p>注意之前提到的<code>单位操作区域</code>不同于<code>管辖区域</code>。<code>单位操作区域</code>之前已经解释了，所谓<code>管辖区域</code>就是我指针指到哪，哪就是我的管辖区域，至于会不会管到无人区或者别人那，就是使用者的事了。</p>
@@ -1323,7 +1360,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">59.1k</span>&nbsp;字
+                class="white-color">59.3k</span>&nbsp;字
             
             
             
