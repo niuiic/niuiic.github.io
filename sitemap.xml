@@ -331,13 +331,6 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/categories/index.html</loc>
-    
-    <lastmod>2021-03-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.niuiic.top/friends/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
@@ -345,14 +338,21 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/tags/index.html</loc>
+    <loc>https://www.niuiic.top/contact/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/contact/index.html</loc>
+    <loc>https://www.niuiic.top/categories/index.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.niuiic.top/tags/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
