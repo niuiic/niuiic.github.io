@@ -586,8 +586,8 @@
 <p>无论是<code>pn</code>还是<code>pdn</code>，它们使用了<code>++</code>运算符来指向下一个元素。可是问题是什么？int 和 double 类型的大小并不一致。那为什么两个指针<code>+1</code>后都可以正确地指向下一个元素呢？</p>
 <p>回顾一下上文对数据类型的设定。我们来对指针也进行设定。</p>
 <p>首先指针是一种数据类型，所以它也是<code>占据的内存大小 + 独有的解析方式</code>。指针在 64 位系统上的大小是 8 个字节。不管是<code>int *</code>还是<code>double *</code>，大小都是一样的。这里就要指出，不要把<code>int *</code>看作一种类型。指针就是指针，其本身就是一种类型。你可以把整型指针中整型看作指针类型的修饰符，或者更形象一点，整型指针属于指针科整型属。</p>
-<p>然后，指针所管辖的单位内存长度由修饰符<code>int</code>决定。<code>int</code>修饰的指针指向内存 100，单位操作区域长度为 4 个字节，为 100、101、102、103。当指针加 1 时，就进入下一个单位操作区域，也就是前进 4 个字节。这里就可以解释为什么说不要把<code>int *</code>看作一种类型。假设我有一个类型叫<code>tni</code>，它也是 4 个字节。那<code>tni *</code>和<code>int *</code>的区别在哪里呢？其他都一样，只是<code>独有的解析方式</code>有差异。但这种差异是可以通过使用方式抹平的（抹平是有限制的）。比如<code>int</code>要用<code>%d</code>打印，<code>tni</code>也可以用<code>%d</code>打印，只要两者的二进制值一样，且编译器支持两种类型相互转换，打印出来就是一样的。</p>
-<p>这里举两个例子。</p>
+<p>然后，指针所管辖的单位内存长度由修饰符<code>int</code>决定。假设<code>int</code>修饰的指针指向内存 100，单位操作区域长度为 4 个字节，为 100、101、102、103。当指针加 1 时，就进入下一个单位操作区域，也就是前进 4 个字节。这里就可以解释为什么说不要把<code>int *</code>看作一种类型。假设我有一个类型叫<code>tni</code>，它也是 4 个字节。那<code>tni *</code>和<code>int *</code>的区别在哪里呢？其他都一样，只是<code>独有的解析方式</code>有差异。但这种差异是可以通过使用方式抹平的（抹平是有限制的）。比如<code>int</code>要用<code>%d</code>打印，<code>tni</code>也可以用<code>%d</code>打印，只要两者的二进制值一样，且编译器支持两种类型相互转换，打印出来就是一样的。</p>
+<p>这里举几个例子。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">chars</span> <span class="token punctuation">&#123;</span>
@@ -604,7 +604,7 @@
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>结果为<code>s.a=d s.b=c s.c=b s.d=a</code>。这里结构体的字段与对应的地址是反着排的。</p>
+<p>结果为<code>s.a=d s.b=c s.c=b s.d=a</code>。这里结构体的字段与对应的地址是低位到高位排列的。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 
 <span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">chars</span> <span class="token punctuation">&#123;</span>
