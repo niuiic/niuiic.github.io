@@ -338,7 +338,7 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/contact/index.html</loc>
+    <loc>https://www.niuiic.top/friends/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -352,7 +352,7 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/friends/index.html</loc>
+    <loc>https://www.niuiic.top/contact/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -636,6 +636,13 @@
   </url>
   
   <url>
+    <loc>https://www.niuiic.top/categories/Rust/</loc>
+    <lastmod>2021-07-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.niuiic.top/categories/Embedded/</loc>
     <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
@@ -650,7 +657,7 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/categories/Rust/</loc>
+    <loc>https://www.niuiic.top/categories/Stm32/</loc>
     <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -665,13 +672,6 @@
   
   <url>
     <loc>https://www.niuiic.top/categories/Raspberry-Pi/</loc>
-    <lastmod>2021-07-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.niuiic.top/categories/Stm32/</loc>
     <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
