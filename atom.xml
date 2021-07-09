@@ -6,7 +6,7 @@
   <link href="https://www.niuiic.top/atom.xml" rel="self"/>
   
   <link href="https://www.niuiic.top/"/>
-  <updated>2021-06-28T03:03:48.539Z</updated>
+  <updated>2021-07-09T13:26:46.863Z</updated>
   <id>https://www.niuiic.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C Pointer</title>
+    <link href="https://www.niuiic.top/2021/07/09/c-pointer/"/>
+    <id>https://www.niuiic.top/2021/07/09/c-pointer/</id>
+    <published>2021-07-09T09:41:54.000Z</published>
+    <updated>2021-07-09T13:26:46.863Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;C-语言指针&quot;&gt;&lt;a href=&quot;#C-语言指针&quot; class=&quot;headerlink&quot; title=&quot;C 语言指针&quot;&gt;&lt;/a&gt;C 语言指针&lt;/h1&gt;&lt;p&gt;最近得空玩了会儿 stm8 单片机。本来还想着能不能用 rust 语言开发，可惜 llvm</summary>
+        
+      
+    
+    
+    
+    <category term="C" scheme="https://www.niuiic.top/categories/C/"/>
+    
+    
+    <category term="C" scheme="https://www.niuiic.top/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Develop Stm8 on Linux</title>
@@ -592,35 +617,6 @@
     <category term="FPGA" scheme="https://www.niuiic.top/tags/FPGA/"/>
     
     <category term="Arduino" scheme="https://www.niuiic.top/tags/Arduino/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Basic Tutorial of Vue-Vite-Typescript</title>
-    <link href="https://www.niuiic.top/2021/05/17/basic-tutorial-of-vue-vite-typescript/"/>
-    <id>https://www.niuiic.top/2021/05/17/basic-tutorial-of-vue-vite-typescript/</id>
-    <published>2021-05-17T14:08:07.000Z</published>
-    <updated>2021-06-13T01:03:02.728Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Basic-Tutorial-of-Vue-Vite-Typescript&quot;&gt;&lt;a href=&quot;#Basic-Tutorial-of-Vue-Vite-Typescript&quot; class=&quot;headerlink&quot; title=&quot;Basic Tutorial of</summary>
-        
-      
-    
-    
-    
-    <category term="Vue" scheme="https://www.niuiic.top/categories/Vue/"/>
-    
-    
-    <category term="Vue" scheme="https://www.niuiic.top/tags/Vue/"/>
-    
-    <category term="Vite" scheme="https://www.niuiic.top/tags/Vite/"/>
-    
-    <category term="Typescript" scheme="https://www.niuiic.top/tags/Typescript/"/>
     
   </entry>
   

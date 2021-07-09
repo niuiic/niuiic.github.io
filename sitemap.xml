@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.niuiic.top/2021/07/09/c-pointer/</loc>
+    
+    <lastmod>2021-07-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.niuiic.top/2021/06/23/develop-stm8-on-linux/</loc>
     
     <lastmod>2021-06-28</lastmod>
@@ -424,7 +431,7 @@
 
   <url>
     <loc>https://www.niuiic.top/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -432,161 +439,168 @@
   
   <url>
     <loc>https://www.niuiic.top/tags/Vim/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Vue/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Vite/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Typescript/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Gentoo/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.niuiic.top/tags/C/</loc>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Tauri/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Less/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/MSP430G2/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Linux/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/FPGA/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Systemverilog/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/verilator/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Rust/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Stm32/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Stm8/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Raspberry-Pi/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Manjaro/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Java/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Oracle/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Arduino/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Realvnc/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Latex/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/tags/Markdown/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -595,63 +609,70 @@
   
   <url>
     <loc>https://www.niuiic.top/categories/Vim/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Vue/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Gentoo/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.niuiic.top/categories/C/</loc>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Rust/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Embedded/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/FPGA/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Stm32/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Linux/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.niuiic.top/categories/Raspberry-Pi/</loc>
-    <lastmod>2021-06-28</lastmod>
+    <lastmod>2021-07-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
