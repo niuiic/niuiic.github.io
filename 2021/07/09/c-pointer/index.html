@@ -482,14 +482,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4k
+                    4.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    18 分
                 </div>
                 
 
@@ -648,6 +648,9 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意<code>chars</code>不能转化为<code>int</code>，如果写成这样就是不行的。<code>printf(&quot;%d\n&quot;, (int)*s);</code>。</p>
+<blockquote>
+<p>这里其实可以看作使用指针将<code>chars</code>转化为<code>int</code>。虽然没有什么意义，但是体现了 C 指针的强大之处。你完全可以据此为两个无法互相转化的类型定义转化函数。</p>
+</blockquote>
 <p>再比如以下程序。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
@@ -688,7 +691,7 @@
 <blockquote>
 <p>注意这只是一个设定，方便理解指针，并不依照底层原理。</p>
 </blockquote>
-<h2 id="指针进阶"><a href="#指针进阶" class="headerlink" title="指针进阶"></a>指针进阶</h2><p>有了前文的两个设定，下面来看一些有意思的较复杂的指针。</p>
+<h2 id="指针进阶"><a href="#指针进阶" class="headerlink" title="指针进阶"></a>指针进阶</h2><h3 id="指针与其他操作符的结合"><a href="#指针与其他操作符的结合" class="headerlink" title="指针与其他操作符的结合"></a>指针与其他操作符的结合</h3><p>有了前文的两个设定，下面来看一些有意思的较复杂的指针。</p>
 <ol>
 <li><code>int *f, g</code></li>
 </ol>
@@ -738,7 +741,60 @@
 </ol>
 <p><code>f</code>是一个数组，数组的元素是指向函数的指针，函数的参数有两个，分别是 int 和 float 类型，函数的返回值是整型指针。</p>
 <p>还有更多例子就不一一列举了。另外因为 C 指针的灵活性很高，像使用指针将函数作为参数传入另一个函数中这种操作实在太多，也不在此进行说明。</p>
-<h2 id="指针的生命周期"><a href="#指针的生命周期" class="headerlink" title="指针的生命周期"></a>指针的生命周期</h2><p>所谓生命周期就是指针存在的时间，什么时候生，什么时候死。生命周期的概念在 rust 语言中得到广泛应用，如果想对这方面做深入了解，可以去学习 rust 语言。</p>
+<h3 id="指针与-const"><a href="#指针与-const" class="headerlink" title="指针与 const"></a>指针与 const</h3><p>C 语言的声明绝对是非常可怕的。原因就在于你无法正常地从左向右理解声明的含义。比如以下三个声明。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span> a<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token keyword">const</span> <span class="token operator">*</span> a<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">*</span> <span class="token keyword">const</span> a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>前两者表示指针所指的对象是只读的，最后一个表示指针本身是只读的。那如果要使得两者皆为只读，又要怎么办呢？</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span> <span class="token keyword">const</span> a<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token keyword">const</span> <span class="token operator">*</span> <span class="token keyword">const</span> a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>初学者看到这肯定已经晕头转向了。不过不要慌，规律很好找，<code>const</code>会和左边紧邻的<code>*</code>结合，前两个的<code>const</code>左边都没有<code>*</code>，那么是和<code>int</code>结合，表示所指的对象是只读的，第三个<code>* const</code>表示指针只读。再把两者结合一下就是后面两个了。</p>
+<p>如果你还行的话，知道这是什么类型吗？<code>char * const *(*next)();</code></p>
+<p>稍微解释一下，依旧是之前的逻辑。先找到变量名<code>next</code>。然后是<code>(*next)</code>，所以该变量是一个指针。再然后是<code>(*next)()</code>，指向函数的指针。再是<code>char * const *</code>，函数返回值，显然是一个二级指针，指向一个只读的指向 char 的指针。所以合起来就是<code>next</code>是一个指向函数的指针，该函数返回一个指针，该指针指向一个只读的字符型指针。</p>
+<p>关于 const 指针的特性看几个例子就明白了。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token operator">&amp;</span>b<span class="token punctuation">;</span>
+  <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token operator">&amp;</span>b<span class="token punctuation">;</span>
+  <span class="token operator">*</span>a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">// error</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token operator">&amp;</span>b<span class="token punctuation">;</span>
+  a <span class="token operator">=</span> <span class="token operator">&amp;</span>c<span class="token punctuation">;</span> <span class="token comment">// error</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token operator">&amp;</span>b<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>d <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>
+  <span class="token operator">*</span>d <span class="token operator">=</span> <span class="token operator">&amp;</span>c<span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 2</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="多级指针"><a href="#多级指针" class="headerlink" title="多级指针"></a>多级指针</h3><p>多级指针无非就是指向指针的指针。上文已经说说了指针本身是个变量，所以指向指针的指针与指向其他变量的指针没什么区别。此处不再详述。</p>
+<h2 id="指针的生命周期"><a href="#指针的生命周期" class="headerlink" title="指针的生命周期"></a>指针的生命周期</h2><p>所谓生命周期就是指针存在的时间，什么时候生，什么时候死。生命周期的概念在 rust 语言中得到广泛应用，这也是支撑 rust 内存安全特性最重要的内容。如果想对这方面做深入了解，可以去学习 rust 语言。</p>
 <p>C 指针的生存周期其实很明确，但由于编译器不帮忙排查问题，不会提醒用户，所以这些工作以及风险全部由用户承担。</p>
 <p>用一个词来概括指针的生与死就是<code>有借有还</code>。详细点就是指针生来就需要“借”一块内存来管理，如果指针所管辖的这块区域不用了，就应该将内存还回去，并且这个指针应该消亡。</p>
 <p>举个例子，看以下程序。</p>
@@ -761,8 +817,19 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这会儿一直在借内存，但就是不还。用不了几秒钟，你的内存就会被跑满。</p>
-<p>所以记住<code>有借有还</code>的原则，不要不给内存就要求指针去干活，更不要<code>有借无还</code>，这样下次就没人肯借了。另外及时清理指针的尸体（已经不需要的指针）也是有必要的。所谓清理尸体，一种是退栈的时候程序顺道扫了，一种是指针变量不被清除（比如你将其设置为全局变量了），将其设为<code>NULL</code>，使用的时候需要进行判断。</p>
+<p>所以记住<code>有借有还</code>的原则，不要不给内存就要求指针去干活，更不要<code>有借无还</code>，这样下次就没人肯借了。另外及时清理指针的尸体（已经不需要的指针）也是有必要的。所谓清理尸体，一种是退栈的时候程序顺道扫了（这种时候指针本身在栈上），一种是指针变量不被清除（比如你将其设置为全局变量了，或者指针本身在堆上），那么堆上的指针可以直接释放，栈上的指针设为<code>NULL</code>，使用的时候进行判断是否可以用。</p>
 <p>记住原则是不够的，有时候负债多了，自己都记不得债主有哪些了。这种就只能靠经验和一些辅助方法（比如把所有债主写下来）了。</p>
+<p>总结一下。</p>
+<ol>
+<li>创建指针变量后，使用前必须将指针指向有效位置。</li>
+<li>内存使用完毕后及时释放。栈空间在退栈的时候自动释放，堆空间需要手动释放。</li>
+<li>不再使用的指针（所指区域已被释放，或者不想用这个指针了）必须置<code>NULL</code>或将其清除。</li>
+</ol>
+<p>最后，如果你真的懂了，来看看以下程序有什么问题。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token operator">*</span> <span class="token function">generateArray</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">,</span> <span class="token keyword">int</span> c<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>a<span class="token punctuation">,</span> b <span class="token punctuation">,</span>c<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1420,7 +1487,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">59.6k</span>&nbsp;字
+                class="white-color">60.4k</span>&nbsp;字
             
             
             
