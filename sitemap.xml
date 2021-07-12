@@ -289,13 +289,6 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/2020/08/04/vim-markdown-latex/</loc>
-    
-    <lastmod>2021-03-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.niuiic.top/2021/03/23/vim-markdown-preview-plugin/</loc>
     
     <lastmod>2021-03-23</lastmod>
@@ -304,6 +297,13 @@
   
   <url>
     <loc>https://www.niuiic.top/2020/10/19/vim-plugin-management/</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.niuiic.top/2020/08/04/vim-markdown-latex/</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/about/index.html</loc>
+    <loc>https://www.niuiic.top/categories/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/categories/index.html</loc>
+    <loc>https://www.niuiic.top/about/index.html</loc>
     
     <lastmod>2021-03-23</lastmod>
     
@@ -606,14 +606,14 @@
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/tags/Latex/</loc>
+    <loc>https://www.niuiic.top/tags/Markdown/</loc>
     <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.niuiic.top/tags/Markdown/</loc>
+    <loc>https://www.niuiic.top/tags/Latex/</loc>
     <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
