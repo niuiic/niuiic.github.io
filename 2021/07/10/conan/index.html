@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Gentoo Tutorials Directory, niuiic &#39;s Blog">
+    <meta name="keywords" content="Conan, niuiic &#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Gentoo Tutorials Directory | niuiic &#39;s Blog</title>
+    <title>Conan | niuiic &#39;s Blog</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -322,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Gentoo Tutorials Directory</h1>
+                    <h1 class="description center-align post-title">Conan</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Gentoo/">
-                                <span class="chip bg-color">Gentoo</span>
+                            <a href="/tags/C/">
+                                <span class="chip bg-color">C</span>
+                            </a>
+                        
+                            <a href="/tags/Conan/">
+                                <span class="chip bg-color">Conan</span>
                             </a>
                         
                     </div>
@@ -455,8 +459,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Gentoo/" class="post-category">
-                                Gentoo
+                            <a href="/categories/C/" class="post-category">
+                                C
                             </a>
                         
                     </div>
@@ -468,28 +472,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-06
+                    2021-07-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-23
+                    2021-07-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    26
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -512,7 +516,190 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Gentoo-系列教程目录"><a href="#Gentoo-系列教程目录" class="headerlink" title="Gentoo 系列教程目录"></a>Gentoo 系列教程目录</h1><h2 id="Gentoo-Preface"><a href="#Gentoo-Preface" class="headerlink" title="Gentoo Preface"></a><a target="_blank" rel="noopener" href="https://niuiic.top/2020/08/04/gentoo-preface/">Gentoo Preface</a></h2><h2 id="Gentoo-Package-Management"><a href="#Gentoo-Package-Management" class="headerlink" title="Gentoo Package Management"></a><a target="_blank" rel="noopener" href="https://niuiic.top/2020/08/05/gentoo-package-management/">Gentoo Package Management</a></h2><h2 id="Gentoo-Compiler-Selection"><a href="#Gentoo-Compiler-Selection" class="headerlink" title="Gentoo Compiler Selection"></a><a target="_blank" rel="noopener" href="https://niuiic.top/2020/08/05/gentoo-compiler-selection/">Gentoo Compiler Selection</a></h2><h2 id="Gentoo-Compile-Error-Handling"><a href="#Gentoo-Compile-Error-Handling" class="headerlink" title="Gentoo Compile Error Handling"></a><a target="_blank" rel="noopener" href="https://niuiic.top/2020/08/06/gentoo-compile-error-handling/">Gentoo Compile Error Handling</a></h2><h2 id="Gentoo-Basic-System-Installation"><a href="#Gentoo-Basic-System-Installation" class="headerlink" title="Gentoo Basic System Installation"></a><a href="https://www.niuiic.top/2020/08/07/gentoo-basic-system-installation/">Gentoo Basic System Installation</a></h2><h2 id="Gentoo-Kool-Desktop-Environment-Installation"><a href="#Gentoo-Kool-Desktop-Environment-Installation" class="headerlink" title="Gentoo Kool Desktop Environment Installation"></a><a href="https://www.niuiic.top/2020/08/08/gentoo-kool-desktop-environment-installation/">Gentoo Kool Desktop Environment Installation</a></h2><h2 id="Gentoo-System-Further-Improvement"><a href="#Gentoo-System-Further-Improvement" class="headerlink" title="Gentoo System Further Improvement"></a><a href="https://www.niuiic.top/2020/08/08/gentoo-system-further-improvement/">Gentoo System Further Improvement</a></h2>
+                <h1 id="Conan-包管理器"><a href="#Conan-包管理器" class="headerlink" title="Conan 包管理器"></a>Conan 包管理器</h1><p>本文简要介绍 Conan 的用法。</p>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// md5.cpp</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Poco/MD5Engine.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"Poco/DigestStream.h"</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span> argv<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	Poco<span class="token double-colon punctuation">::</span>MD5Engine md5<span class="token punctuation">;</span>
+	Poco<span class="token double-colon punctuation">::</span>DigestOutputStream <span class="token function">ds</span><span class="token punctuation">(</span>md5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	ds <span class="token operator">&lt;&lt;</span> <span class="token string">"abcdefghijklmnopqrstuvwxyz"</span><span class="token punctuation">;</span>
+	ds<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> Poco<span class="token double-colon punctuation">::</span><span class="token class-name">DigestEngine</span><span class="token double-colon punctuation">::</span><span class="token function">digestToHex</span><span class="token punctuation">(</span>md5<span class="token punctuation">.</span><span class="token function">digest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://conan.io/center">Conan 远程仓库</a></p>
+<p>搜索 poco。</p>
+<p>查看版本信息。<code>conan inspect poco/1.10.1</code>。</p>
+<pre class="line-numbers language-none"><code class="language-none"># conanfile.txt
+
+[requires]
+poco&#x2F;1.10.1
+
+[generators]
+cmake<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">conan profile new default --detect
+conan profile update settings.compiler.libcxx&#x3D;libstdc++11 default
+mkdir build
+cd build
+conan install .. --build&#x3D;missing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># CMakeLists.txt</span>
+
+<span class="token keyword">cmake_minimum_required</span><span class="token punctuation">(</span><span class="token property">VERSION</span> <span class="token number">2.8.12</span><span class="token punctuation">)</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>MD5Encrypter<span class="token punctuation">)</span>
+
+<span class="token keyword">add_definitions</span><span class="token punctuation">(</span><span class="token string">"-std=c++11"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">include</span><span class="token punctuation">(</span><span class="token punctuation">$&#123;</span><span class="token variable">CMAKE_BINARY_DIR</span><span class="token punctuation">&#125;</span>/conanbuildinfo.cmake<span class="token punctuation">)</span>
+<span class="token function">conan_basic_setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">add_executable</span><span class="token punctuation">(</span>md5 md5.cpp<span class="token punctuation">)</span>
+<span class="token keyword">target_link_libraries</span><span class="token punctuation">(</span>md5 <span class="token punctuation">$&#123;</span>CONAN_LIBS<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">cd build
+cmake .. -G Ninja -DCMAKE_BUILD_TYPE&#x3D;Release
+ninja
+cd bin
+.&#x2F;md5
+# the output is c3fcd3d76192e4007dfb496cca67e13b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>添加编译设置。<code>conan --settings compiler=&quot;gcc&quot; --settings os=&quot;Linux&quot;</code></p>
+<p>conan 的本地缓存位置为<code>~/.conan/data</code></p>
+<p>使用<code>conan search &quot;*&quot;</code>搜索所有本地包。搜索特定包时为<code>conan search apr/1.7.0@</code>。</p>
+<p>使用<code>conan info .</code>检查当前项目依赖项，注意需要指向<code>conanfile.txt</code>文件所在目录。也可以生成依赖关系图<code>conan info . --graph=file.html</code>。</p>
+<p>可以在<code>~/.conan/profiles</code>中编写配置文件，如<code>gcc_x86</code>，然后通过<code>conan install .. --profile=gcc_x86</code>来使用。</p>
+<p>使用<code>conan remove</code>命令删除包。</p>
+<p>可以在<code>conanfile.txt</code>中指定使用动态链接（默认是静态）。</p>
+<pre class="line-numbers language-none"><code class="language-none">[options]
+poco:shared&#x3D;True
+openssl:shared&#x3D;True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>还可以将动态链接库复制到程序所在的目录，使得它们可以被可执行文件找到。</p>
+<pre class="line-numbers language-none"><code class="language-none">[imports]
+bin, *.dll -&gt; .&#x2F;bin
+lib, *.dylib* -&gt; .&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>注意<code>~/.conan/profiles</code>下的配置文件中也有默认配置内容。比如以下配置。</p>
+<pre class="line-numbers language-none"><code class="language-none"># clang_3.5
+
+[settings]
+ os&#x3D;Macos
+ arch&#x3D;x86_64
+ compiler&#x3D;clang
+ compiler.version&#x3D;3.5
+ compiler.libcxx&#x3D;libstdc++11
+ build_type&#x3D;Release
+
+ [env]
+ CC&#x3D;&#x2F;usr&#x2F;bin&#x2F;clang
+ CXX&#x3D;&#x2F;usr&#x2F;bin&#x2F;clang++<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用时用命令<code>conan create . demo/testing -pr=clang_3.5</code>调用即可。</p>
+<p>可以对不同的构建使用不同的配置并使用不同的构建目录。</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">conan install md5 -s build_type&#x3D;Debug -if md5_build_debug
+conan install md5 -s build_type&#x3D;Release -if md5_build_release
+cd md5_build_debug &amp;&amp; cmake --build . --config Debug &amp;&amp; cd ..&#x2F;..
+cd md5_build_release &amp;&amp; cmake --build . --config Release &amp;&amp; cd ..&#x2F;..<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果要对依赖进行调试，则需要在本地编译这些依赖，而不是直接下载二进制包。可以使用<code>conan install &lt;reference&gt; --build &lt;name&gt; --profile &lt;debug_profile&gt;</code>。</p>
+<h2 id="创建包"><a href="#创建包" class="headerlink" title="创建包"></a>创建包</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">mkdir mypkg &amp;&amp; cd mypkg
+conan new hello&#x2F;0.1 -t<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>目录结构如下。</p>
+<pre class="line-numbers language-none"><code class="language-none">conanfile.py
+test_package
+	  CMakeLists.txt
+	  conanfile.py
+	  example.cpp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中<code>conanfile.py</code>用于定义包。比如。</p>
+<pre class="line-numbers language-none"><code class="language-none"># conanfile.py
+
+from conans import ConanFile, CMake, tools
+
+class HelloConan(ConanFile):
+    name &#x3D; &quot;hello&quot;
+    version &#x3D; &quot;0.1&quot;
+    license &#x3D; &quot;&lt;Put the package license here&gt;&quot;
+    url &#x3D; &quot;&lt;Package recipe repository url here, for issues about the package&gt;&quot;
+    description &#x3D; &quot;&lt;Description of hello here&gt;&quot;
+    settings &#x3D; &quot;os&quot;, &quot;compiler&quot;, &quot;build_type&quot;, &quot;arch&quot;
+    options &#x3D; &#123;&quot;shared&quot;: [True, False]&#125;
+    default_options &#x3D; &#123;&quot;shared&quot;: False&#125;
+    generators &#x3D; &quot;cmake&quot;
+
+    def source(self):
+        self.run(&quot;git clone https:&#x2F;&#x2F;github.com&#x2F;conan-io&#x2F;hello.git&quot;)
+        # This small hack might be useful to guarantee proper &#x2F;MT &#x2F;MD linkage
+        # in MSVC if the packaged project doesn&#39;t have variables to set it
+        # properly
+        tools.replace_in_file(&quot;hello&#x2F;CMakeLists.txt&quot;, &quot;PROJECT(MyHello)&quot;,
+                              &#39;&#39;&#39;PROJECT(MyHello)
+include($&#123;CMAKE_BINARY_DIR&#125;&#x2F;conanbuildinfo.cmake)
+conan_basic_setup()&#39;&#39;&#39;)
+
+    def build(self):
+        cmake &#x3D; CMake(self)
+        cmake.configure(source_folder&#x3D;&quot;hello&quot;)
+        cmake.build()
+
+        # Explicit way:
+        # self.run(&#39;cmake %s&#x2F;hello %s&#39;
+        #          % (self.source_folder, cmake.command_line))
+        # self.run(&quot;cmake --build . %s&quot; % cmake.build_config)
+
+    def package(self):
+        self.copy(&quot;*.h&quot;, dst&#x3D;&quot;include&quot;, src&#x3D;&quot;hello&quot;)
+        self.copy(&quot;*hello.lib&quot;, dst&#x3D;&quot;lib&quot;, keep_path&#x3D;False)
+        self.copy(&quot;*.dll&quot;, dst&#x3D;&quot;bin&quot;, keep_path&#x3D;False)
+        self.copy(&quot;*.so&quot;, dst&#x3D;&quot;lib&quot;, keep_path&#x3D;False)
+        self.copy(&quot;*.dylib&quot;, dst&#x3D;&quot;lib&quot;, keep_path&#x3D;False)
+        self.copy(&quot;*.a&quot;, dst&#x3D;&quot;lib&quot;, keep_path&#x3D;False)
+
+    def package_info(self):
+        self.cpp_info.libs &#x3D; [&quot;hello&quot;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>test_package</code>目录用于测试包。</p>
+<p><code>test_package/conanfile.py</code>是另一个配置。</p>
+<pre class="line-numbers language-none"><code class="language-none"># test_package&#x2F;conanfile.py
+
+from conans import ConanFile, CMake
+import os
+
+class HelloTestConan(ConanFile):
+    settings &#x3D; &quot;os&quot;, &quot;compiler&quot;, &quot;build_type&quot;, &quot;arch&quot;
+    generators &#x3D; &quot;cmake&quot;
+
+    def build(self):
+        cmake &#x3D; CMake(self)
+        cmake.configure()
+        cmake.build()
+
+    def imports(self):
+        self.copy(&quot;*.dll&quot;, dst&#x3D;&quot;bin&quot;, src&#x3D;&quot;bin&quot;)
+        self.copy(&quot;*.dylib*&quot;, dst&#x3D;&quot;bin&quot;, src&#x3D;&quot;lib&quot;)
+
+    def test(self):
+        os.chdir(&quot;bin&quot;)
+        self.run(&quot;.%sexample&quot; % os.sep)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>创建并测试包<code>conan create . demo/testing</code>。该命令相当于以下命令。</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">conan export . demo&#x2F;testing
+conan install hello&#x2F;0.1@demo&#x2F;testing --build&#x3D;hello
+# package is created now, use test to test it
+conan test test_package hello&#x2F;0.1@demo&#x2F;testing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>移除包与上传包。</p>
+<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">conan remove packagename&#x2F;1.0
+conan upload packagename&#x2F;1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
@@ -538,7 +725,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/">https://www.niuiic.top/2020/08/06/gentoo-tutorials-directory/</a>
+                    <a href="https://www.niuiic.top/2021/07/10/conan/">https://www.niuiic.top/2021/07/10/conan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -576,8 +763,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Gentoo/">
-                                    <span class="chip bg-color">Gentoo</span>
+                                <a href="/tags/C/">
+                                    <span class="chip bg-color">C</span>
+                                </a>
+                            
+                                <a href="/tags/Conan/">
+                                    <span class="chip bg-color">Conan</span>
                                 </a>
                             
                         </div>
@@ -889,17 +1080,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/07/gentoo-basic-system-installation/">
+                <a href="/2021/07/10/conan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Gentoo Basic System Installation">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Conan">
                         
-                        <span class="card-title">Gentoo Basic System Installation</span>
+                        <span class="card-title">Conan</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -909,26 +1101,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Gentoo/" class="post-category">
-                                    Gentoo
+                            <a href="/categories/C/" class="post-category">
+                                    C
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Gentoo/">
-                        <span class="chip bg-color">Gentoo</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C</span>
+                    </a>
+                    
+                    <a href="/tags/Conan/">
+                        <span class="chip bg-color">Conan</span>
                     </a>
                     
                 </div>
@@ -942,13 +1139,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/06/vim-preface/">
+                <a href="/2021/07/09/c-pointer/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Vim Preface">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="C Pointer">
                         
-                        <span class="card-title">Vim Preface</span>
+                        <span class="card-title">C Pointer</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -959,14 +1156,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Vim/" class="post-category">
-                                    Vim
+                            <a href="/categories/C/" class="post-category">
+                                    C
                                 </a>
                             
                             
@@ -976,8 +1173,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vim/">
-                        <span class="chip bg-color">Vim</span>
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C</span>
                     </a>
                     
                 </div>

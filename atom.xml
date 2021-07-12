@@ -6,7 +6,7 @@
   <link href="https://www.niuiic.top/atom.xml" rel="self"/>
   
   <link href="https://www.niuiic.top/"/>
-  <updated>2021-07-10T12:30:58.593Z</updated>
+  <updated>2021-07-10T14:23:32.178Z</updated>
   <id>https://www.niuiic.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Conan</title>
+    <link href="https://www.niuiic.top/2021/07/10/conan/"/>
+    <id>https://www.niuiic.top/2021/07/10/conan/</id>
+    <published>2021-07-10T13:25:28.000Z</published>
+    <updated>2021-07-10T14:23:32.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Conan-包管理器&quot;&gt;&lt;a href=&quot;#Conan-包管理器&quot; class=&quot;headerlink&quot; title=&quot;Conan 包管理器&quot;&gt;&lt;/a&gt;Conan 包管理器&lt;/h1&gt;&lt;p&gt;本文简要介绍 Conan 的用法。&lt;/p&gt;
+&lt;h2 id=&quot;入门&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="C" scheme="https://www.niuiic.top/categories/C/"/>
+    
+    
+    <category term="C" scheme="https://www.niuiic.top/tags/C/"/>
+    
+    <category term="Conan" scheme="https://www.niuiic.top/tags/Conan/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C Pointer</title>
     <link href="https://www.niuiic.top/2021/07/09/c-pointer/"/>
     <id>https://www.niuiic.top/2021/07/09/c-pointer/</id>
     <published>2021-07-09T09:41:54.000Z</published>
-    <updated>2021-07-10T12:30:58.593Z</updated>
+    <updated>2021-07-12T13:03:20.055Z</updated>
     
     
       
@@ -590,33 +618,6 @@
     <category term="Tauri" scheme="https://www.niuiic.top/tags/Tauri/"/>
     
     <category term="Less" scheme="https://www.niuiic.top/tags/Less/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Basic Tutorial of Spartan Edge Accelerator Board</title>
-    <link href="https://www.niuiic.top/2021/06/03/spartan-edge-accelerator-board-tutorial/"/>
-    <id>https://www.niuiic.top/2021/06/03/spartan-edge-accelerator-board-tutorial/</id>
-    <published>2021-06-03T08:57:37.000Z</published>
-    <updated>2021-06-03T14:42:05.565Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Spartan-Edge-Accelerator-Board-入门教程&quot;&gt;&lt;a href=&quot;#Spartan-Edge-Accelerator-Board-入门教程&quot; class=&quot;headerlink&quot; title=&quot;Spartan Edge</summary>
-        
-      
-    
-    
-    
-    <category term="Embedded" scheme="https://www.niuiic.top/categories/Embedded/"/>
-    
-    
-    <category term="FPGA" scheme="https://www.niuiic.top/tags/FPGA/"/>
-    
-    <category term="Arduino" scheme="https://www.niuiic.top/tags/Arduino/"/>
     
   </entry>
   
