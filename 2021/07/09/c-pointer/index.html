@@ -475,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-12
+                    2021-07-13
                 </div>
                 
 
@@ -763,7 +763,7 @@
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 
-<span class="token comment">// Return the pointer which points to the specific calculation function.</span>
+<span class="token comment">// Return the pointer which points to the concrete calculation function.</span>
 <span class="token keyword">double</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token function">getCalculationFunction</span><span class="token punctuation">(</span>Input <span class="token operator">*</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>Input <span class="token operator">*</span>input<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">switch</span> <span class="token punctuation">(</span>input<span class="token operator">-></span>operator<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">case</span> <span class="token string">'+'</span><span class="token operator">:</span>
@@ -775,7 +775,7 @@
   <span class="token keyword">case</span> <span class="token string">'/'</span><span class="token operator">:</span>
     <span class="token keyword">return</span> divide<span class="token punctuation">;</span>
   <span class="token keyword">default</span><span class="token operator">:</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Error : invaild operator.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Error : invalid operator.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
@@ -783,9 +783,9 @@
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   Input input <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
-  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please input number1\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please input left number\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>input<span class="token punctuation">.</span>leftNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please input number2\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please input right number\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>input<span class="token punctuation">.</span>rightNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Please input the operator\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
