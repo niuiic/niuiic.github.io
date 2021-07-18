@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.niuiic.top/2020/10/20/vim-debugging-scheme/</loc>
+    <lastmod>2021-07-18</lastmod>
+  </url>
+  <url>
     <loc>https://www.niuiic.top/2021/07/09/c-pointer/</loc>
     <lastmod>2021-07-13</lastmod>
   </url>
@@ -154,10 +158,6 @@
   </url>
   <url>
     <loc>https://www.niuiic.top/2021/03/23/vim-clipboard-history-plugin/</loc>
-    <lastmod>2021-03-23</lastmod>
-  </url>
-  <url>
-    <loc>https://www.niuiic.top/2020/10/20/vim-debugging-scheme/</loc>
     <lastmod>2021-03-23</lastmod>
   </url>
   <url>
